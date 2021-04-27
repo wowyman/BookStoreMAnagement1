@@ -10,8 +10,8 @@ public class BookDB {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
-        //insertBook("4","da kiem","zed","1","lolllll","2020-1-4","1","3200","1");
-        deleteWithBookName("da kiem");
+        insertBook("4","da kiem","zed","1","lolllll","2020-1-4","1","3200","1");
+        //deleteWithBookName("da kiem");
     }
 
 

@@ -1,63 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<GridPane alignment="center" hgap="10" prefHeight="500.0" prefWidth="800.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
-   <children>
-      <Pane prefHeight="25.0" prefWidth="800.0" GridPane.rowIndex="2" />
-      <MenuBar prefHeight="28.0" prefWidth="809.0" GridPane.rowIndex="1">
-        <menus>
-          <Menu mnemonicParsing="false" text="Hệ Thống">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Quản Trị Người Dùng" />
-                  <MenuItem mnemonicParsing="false" text="Logout" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Exit" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Quản lý danh mục">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Quản Lý Nhà Cung Cấp" />
-                  <MenuItem mnemonicParsing="false" text="Quản Lý Nhân Viên" />
-                  <MenuItem mnemonicParsing="false" text="Quản Lý Khách" />
-                  <MenuItem mnemonicParsing="false" text="Quản Lý Sách" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Quản lý nhập xuất">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Phiếu Nhập" />
-                  <MenuItem mnemonicParsing="false" text="Phiếu Xuất" />
-            </items>
-          </Menu>
-            <Menu mnemonicParsing="false" text="Quản lý quầy">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Lập Phiếu Giao Ca" />
-                  <RadioMenuItem mnemonicParsing="false" text="Lập Phiếu Mượn" />
-              </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Quản lý thẻ">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Quản Lý Thẻ Khách" />
-                  <MenuItem mnemonicParsing="false" text="Quản Lý Thẻ Mượn" />
-              </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Help">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Cách Sử Dụng" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Thông Tin Chung" />
-              </items>
-            </Menu>
-        </menus>
-      </MenuBar>
-   </children>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 </GridPane>

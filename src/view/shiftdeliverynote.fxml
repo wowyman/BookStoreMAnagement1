@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="576.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.shiftdeliverynote">
+    <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="14.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã quầy" wrappingWidth="116.13671875">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="321.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày lập">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Button layoutX="55.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
+        <Button layoutX="197.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="In" />
+        <Button layoutX="351.0" layoutY="255.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="64.0" text="Lưu" />
+        <Button layoutX="484.0" layoutY="255.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
+        <Button layoutX="152.0" layoutY="550.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Chấp nhận" />
+        <Button layoutX="397.0" layoutY="550.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Hủy" />
+        <Text layoutX="152.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý phiếu giao ca" wrappingWidth="462.7016296386719">
+            <font>
+                <Font name="Elephant" size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="13.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin chuyển giao" />
+        <ChoiceBox layoutX="155.0" layoutY="164.0" prefHeight="25.0" prefWidth="130.0" />
+        <ChoiceBox layoutX="435.0" layoutY="121.0" prefHeight="25.0" prefWidth="130.0" />
+        <Text layoutX="12.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã phiếu giao ca">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="320.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên quầy">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="187.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ca">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <TextField layoutX="155.0" layoutY="121.0" prefHeight="25.0" prefWidth="130.0" />
+        <TextField layoutX="444.0" layoutY="164.0" prefHeight="25.0" prefWidth="130.0" />
+        <CheckBox layoutX="257.0" layoutY="215.0" mnemonicParsing="false" text="1" />
+        <CheckBox layoutX="324.0" layoutY="215.0" mnemonicParsing="false" text="2" />
+        <ScrollPane layoutX="1.0" layoutY="329.0" prefHeight="97.0" prefWidth="568.0">
+         <content>
+                <MenuBar prefHeight="25.0" prefWidth="1054.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="STT">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Mã sách">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Mã thẻ">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Tên sách">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Thể loại">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Tác giả">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Đơn giá">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Số lượng">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+         </content>
+        </ScrollPane>
+      <Text layoutX="11.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã người giao">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="372.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="8.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã người nhận">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="318.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Họ và tên">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="318.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Họ và tên">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField layoutX="426.0" layoutY="446.0" />
+      <TextField layoutX="426.0" layoutY="517.0" />
+      <ChoiceBox layoutX="145.0" layoutY="446.0" prefWidth="150.0" />
+      <ChoiceBox layoutX="145.0" layoutY="518.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>
