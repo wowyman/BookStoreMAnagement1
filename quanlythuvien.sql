@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2021 at 08:55 AM
+-- Generation Time: Apr 27, 2021 at 11:43 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -58,7 +58,9 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`bookId`, `bookTitle`, `authorName`, `XBlan`, `theLoai`, `namXB`, `tap`, `price`, `soLuong`) VALUES
-('1', 'quy thu morello', 'phap su', '1', 'lol', '2001-10-01', '1', '3000', '1');
+('1', 'quy thu morello', 'phap su', '1', 'lol', '2001-10-01', '1', '3000', '1'),
+('2', 'mu phu thuy rabadon', 'phap su', '1', 'lollllll', '2020-01-01', '2', '3600', '1'),
+('3', 'sung hai tac', 'missFortune', '1', 'lolllll', '2020-01-01', '1', '3000', '1');
 
 -- --------------------------------------------------------
 
@@ -96,8 +98,15 @@ CREATE TABLE `customers` (
   `Age` int(100) NOT NULL,
   `Address` varchar(50) NOT NULL,
   `PhoneNumber` varchar(50) NOT NULL,
-  `MSPM` varchar(50) NOT NULL
+  `MSPM` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`CMND`, `Name`, `Age`, `Address`, `PhoneNumber`, `MSPM`) VALUES
+('1', 'zed', 20, 'ilonia', '0987654321', NULL);
 
 -- --------------------------------------------------------
 
@@ -114,9 +123,16 @@ CREATE TABLE `employee` (
   `phoneNumber` varchar(50) NOT NULL,
   `queQuan` varchar(50) NOT NULL,
   `salary` decimal(10,0) NOT NULL,
-  `maKho` varchar(50) NOT NULL,
-  `MSCV` varchar(50) NOT NULL
+  `maKho` varchar(50) DEFAULT NULL,
+  `MSCV` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`MSNV`, `name`, `gioiTinh`, `ngaySinh`, `address`, `phoneNumber`, `queQuan`, `salary`, `maKho`, `MSCV`) VALUES
+('1', 'daxua', 'poi', '2001-01-01', 'ilonia', '000111002', 'ilonia', '9999', NULL, NULL);
 
 -- --------------------------------------------------------
 
