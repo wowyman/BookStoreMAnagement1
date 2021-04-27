@@ -1,5 +1,7 @@
 package model;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -11,7 +13,7 @@ public class Employee {
     private StringProperty address;
     private StringProperty phoneNumber;
     private StringProperty queQuan;
-    private StringProperty salary;
+    private IntegerProperty salary;
     //Constructor
     public Employee() {
         MSNV = new SimpleStringProperty();
@@ -21,7 +23,8 @@ public class Employee {
         address = new SimpleStringProperty();
         phoneNumber = new SimpleStringProperty();
         queQuan = new SimpleStringProperty();
-        salary = new SimpleStringProperty();
+        salary = new SimpleIntegerProperty();
+
     }
     //MSNV
 
@@ -111,15 +114,15 @@ public class Employee {
     }
 
     //Salary
-    public void setSalary(String salary) {
+    public void setSalary(int salary) {
         this.salary.set(salary);
     }
 
-    public String getSalary() {
+    public int getSalary() {
         return salary.get();
     }
 
-    public StringProperty salaryProperty() {
+    public IntegerProperty salaryProperty() {
         return salary;
     }
 }

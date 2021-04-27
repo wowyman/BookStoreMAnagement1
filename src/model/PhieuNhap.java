@@ -1,18 +1,20 @@
 package model;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class PhieuNhap {
     private StringProperty MSPN;
     private StringProperty ngayNhap;
-    private StringProperty tongGiaTri;
+    private IntegerProperty tongGiaTri;
 
     //Constructor
     public PhieuNhap() {
         MSPN = new SimpleStringProperty();
         ngayNhap = new SimpleStringProperty();
-        tongGiaTri = new SimpleStringProperty();
+        tongGiaTri = new SimpleIntegerProperty();
     }
 
     //MSPN
@@ -44,15 +46,15 @@ public class PhieuNhap {
     }
 
     //TongGiaTri
-    public void setTongGiaTri(String tongGiaTri) {
+    public void setTongGiaTri(int tongGiaTri) {
         this.tongGiaTri.set(tongGiaTri);
     }
 
-    public String getTongGiaTri() {
+    public int getTongGiaTri() {
         return tongGiaTri.get();
     }
 
-    public StringProperty tongGiaTriProperty() {
+    public IntegerProperty tongGiaTriProperty() {
         return tongGiaTri;
     }
 }

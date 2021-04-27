@@ -5,11 +5,11 @@ import javafx.beans.property.StringProperty;
 
 public class TheKho {
     private StringProperty maThe;
-    private StringProperty ngaPhatSinh;
+    private StringProperty ngayPhatSinh;
     //Constructor
     public TheKho()  {
         maThe = new SimpleStringProperty();
-        ngaPhatSinh = new SimpleStringProperty();
+        ngayPhatSinh = new SimpleStringProperty();
     }
     //MaThe
 
@@ -28,14 +28,14 @@ public class TheKho {
     //NgayPhatSinh
 
     public void setNgaPhatSinh(String ngaPhatSinh) {
-        this.ngaPhatSinh.set(ngaPhatSinh);
+        this.ngayPhatSinh.set(ngaPhatSinh);
     }
 
     public String getNgaPhatSinh() {
-        return ngaPhatSinh.get();
+        return ngayPhatSinh.get();
     }
 
     public StringProperty ngaPhatSinhProperty() {
-        return ngaPhatSinh;
+        return ngayPhatSinh;
     }
 }
