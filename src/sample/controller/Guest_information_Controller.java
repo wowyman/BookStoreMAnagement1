@@ -99,6 +99,7 @@ public class Guest_information_Controller {
                 else return 1;
             });
             CustomerDB.insertCustomer(CMND,name,default_age,address,phoneNumber,mathedoc,mathemuon);
+            clearText();
         } catch (SQLException e){
             System.out.println(e);
             throw e;
@@ -128,6 +129,7 @@ public class Guest_information_Controller {
             String address = dia_chi.getText();
             String phoneNumber = dien_thoai.getText();
             CustomerDB.updateCustomer(CMND, name, address, phoneNumber);
+            clearText();
         } catch (SQLException e) {
             System.out.println(e);
             throw e;
@@ -146,6 +148,15 @@ public class Guest_information_Controller {
             System.out.println(e);
             throw e;
         }
+    }
+
+    void clearText() {
+        ten_khach.setText("");
+        dien_thoai.setText("");
+        dia_chi.setText("");
+        ma_the_doc.setText("");
+        ma_the_muon.setText("");
+
     }
     @FXML
     private Button xong = new Button();

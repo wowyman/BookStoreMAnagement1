@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
-<?import javafx.scene.chart.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="440.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane prefHeight="444.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Book_supplier">
     <children>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="22.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhà CC" wrappingWidth="100.13671875">
@@ -42,33 +38,30 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <TextField layoutX="122.0" layoutY="167.0" />
-        <TextField layoutX="122.0" layoutY="211.0" />
-        <TextField layoutX="415.0" layoutY="122.0" />
-        <TextField layoutX="415.0" layoutY="167.0" />
-        <TextField layoutX="415.0" layoutY="210.0" />
-        <Button layoutX="32.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
-        <Button layoutX="141.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
-        <Button layoutX="239.0" layoutY="255.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
-        <Button layoutX="335.0" layoutY="255.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="64.0" text="Lưu" />
-        <Button layoutX="439.0" layoutY="255.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
-        <Button layoutX="150.0" layoutY="403.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Chấp nhận" />
-        <Button layoutX="372.0" layoutY="403.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Hủy" />
+        <TextField fx:id="dien_thoai" layoutX="122.0" layoutY="167.0" />
+        <TextField fx:id="email" layoutX="122.0" layoutY="211.0" />
+        <TextField fx:id="ten_ncc" layoutX="415.0" layoutY="122.0" />
+        <TextField fx:id="dia_chi" layoutX="415.0" layoutY="167.0" />
+        <TextField fx:id="fax" layoutX="415.0" layoutY="210.0" />
+        <Button layoutX="32.0" layoutY="255.0" mnemonicParsing="false" onAction="#add_ncc" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
+        <Button layoutX="122.0" layoutY="255.0" mnemonicParsing="false" onAction="#delete_ncc" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
+        <Button layoutX="221.0" layoutY="255.0" mnemonicParsing="false" onAction="#update_ncc" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
+        <Button layoutX="326.0" layoutY="255.0" mnemonicParsing="false" onAction="#search_ncc" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
+        <Button layoutX="503.0" layoutY="414.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="90.0" text="Xong" fx:id="xong" />
         <Text layoutX="101.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý thông tin nhà cung cấp" wrappingWidth="505.7016296386719">
             <font>
                 <Font name="Elephant" size="24.0" />
             </font>
         </Text>
         <Text layoutX="17.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin nhà cung cấp" wrappingWidth="158.9921875" />
-        <ChoiceBox layoutX="121.0" layoutY="121.0" prefWidth="150.0" />
-        <TableView layoutX="29.0" layoutY="310.0" prefHeight="93.0" prefWidth="556.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="310.0">
+        <TableView fx:id="table" layoutX="29.0" layoutY="310.0" prefHeight="93.0" prefWidth="556.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="310.0">
             <columns>
-                <TableColumn minWidth="0.0" prefWidth="100.0" text="mã NCC" />
-                <TableColumn prefWidth="148.0" text="Tên NCC" />
-                <TableColumn minWidth="0.0" prefWidth="103.0" text="Địa chỉ" />
-                <TableColumn prefWidth="110.0" text="Điện thoại" />
-                <TableColumn prefWidth="69.0" text="Email" />
-                <TableColumn prefWidth="83.0" text="Fax" />
+                <TableColumn fx:id="mancc" minWidth="0.0" prefWidth="100.0" text="Mã NCC" />
+                <TableColumn fx:id="tenncc" prefWidth="148.0" text="Tên NCC" />
+                <TableColumn fx:id="diachi" minWidth="0.0" prefWidth="103.0" text="Địa chỉ" />
+                <TableColumn fx:id="dienthoai" prefWidth="110.0" text="Điện thoại" />
+                <TableColumn fx:id="Email" prefWidth="69.0" text="Email" />
+                <TableColumn fx:id="Fax" prefWidth="83.0" text="Fax" />
             </columns>
             <padding>
                 <Insets top="2.0" />
@@ -77,5 +70,6 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
+      <ComboBox fx:id="ma_ncc" layoutX="122.0" layoutY="122.0" prefWidth="150.0" />
     </children>
 </AnchorPane>

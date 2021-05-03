@@ -18,9 +18,9 @@ public class Main extends Application {
         this.primaryStage.setTitle("test ");
 
 
-        root = FXMLLoader.load(getClass().getResource("view/Guest_information.fxml"));
+        root = FXMLLoader.load(getClass().getResource("view/Booksupplier.fxml"));
         g.setMain(this);
-        this.primaryStage.setScene(new Scene(root, 602, 449));
+        this.primaryStage.setScene(new Scene(root, 607, 444));
         primaryStage.show();
     }
 
