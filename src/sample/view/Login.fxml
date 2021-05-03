@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="306.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="120.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mật khẩu">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="114.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên đăng nhập">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <TextField layoutX="286.0" layoutY="208.0" prefHeight="25.0" prefWidth="137.0" />
+        <TextField layoutX="287.0" layoutY="141.0" prefHeight="25.0" prefWidth="137.0" />
+        <Button layoutX="174.0" layoutY="259.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Đăng nhập" />
+        <Button layoutX="367.0" layoutY="259.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Hủy" />
+        <Text layoutX="151.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý hệ thống người dùng" wrappingWidth="462.7016296386719">
+            <font>
+                <Font name="Elephant" size="24.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
