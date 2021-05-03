@@ -106,29 +106,30 @@ public class CustomerDB {
             cus.setAge(rs.getInt("Age"));
             cus.setMSPM(rs.getString("MSPM"));
             cus.setAddress(rs.getString("Address"));
+            cus.setmaThedoc(rs.getString("mathedoc"));
+            cus.setmaThemuon(rs.getString("mathemuon"));
             //Add employee to the ObservableList
             cusList.add(cus);
         }
         //return empList (ObservableList of Employees)
         return cusList;
     }
-
+    //search
     public static ObservableList<Customer> search_customer_by_CMND(String CMND) throws SQLException, ClassNotFoundException {
         //Declare a SELECT statement
-        String selectStmt = "SELECT * FROM customer where CMND = " + "'" + CMND + "'";
+        String selectStmt = "SELECT * FROM customers where CMND = " + "'" + CMND + "'";
 
         //Execute SELECT statement
         try {
             //Get ResultSet from dbExecuteQuery method
             ResultSet rs = DBUtil.dbExecuteQuery(selectStmt);
             if (!rs.next()) {
-                System.out.println("not h");
+                System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa ");
+
             }
             rs.beforeFirst();
 
-            //Send ResultSet to the getEmployeeList method and get employee object
 
-            //Return employee object
             return getCustomerList(rs);
         } catch (SQLException e) {
             System.out.println("SQL select operation has been failed: " + e);

@@ -111,8 +111,8 @@ public class Customer {
     }
     //thedoc
 
-    public void setThedoc(Card thedoc) {
-        this.thedoc = thedoc;
+    public void setmaThedoc(String mathedoc) {
+        this.thedoc.setCardNumber(mathedoc);
     }
 
     public Card getThedoc() {
@@ -124,7 +124,7 @@ public class Customer {
         return themuon;
     }
 
-    public void setThemuon(Card themuon) {
-        this.themuon = themuon;
+    public void setmaThemuon(String mathemuon) {
+        this.themuon.setCardNumber(mathemuon);
     }
 }

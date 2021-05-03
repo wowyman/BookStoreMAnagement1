@@ -2,10 +2,13 @@ package sample.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+import javafx.util.Callback;
 import sample.Main;
 import sample.model.Card;
 import sample.model.Customer;
@@ -34,17 +37,8 @@ public class Guest_information_Controller {
     private TextField ma_the_muon = new TextField();
 
 
-    @FXML
-    private Button luu = new Button();
-    @FXML
-    private Button tim_kiem = new Button();
-    @FXML
-    private Button chap_nhan = new Button();
-    @FXML
-    private Button huy = new Button();
-    @FXML
 
-
+    @FXML
     private TableView<Customer> table = new TableView<Customer>();
     @FXML
     private TableColumn<Customer, String> makhach = new TableColumn<>();
@@ -55,20 +49,11 @@ public class Guest_information_Controller {
     @FXML
     private TableColumn<Customer, String> diachi = new TableColumn<>();
     @FXML
-    private TableColumn<Card, String> maTD = new TableColumn<>();
+    private TableColumn<Customer, String> maTD = new TableColumn<>();
     @FXML
-    private TableColumn<Card, String> maTM = new TableColumn<>();
+    private TableColumn<Customer, String> maTM = new TableColumn<>();
 
-    @FXML
-    void search_cus_action() throws SQLException, ClassNotFoundException {
-        try {
-            ObservableList<Customer> data = CustomerDB.search_customer_by_CMND(ma_khach.getPromptText());
-            table.setItems(data);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            throw e;
-        }
-    }
+
 
     @FXML
     void initialize() throws SQLException, ClassNotFoundException {
@@ -91,8 +76,8 @@ public class Guest_information_Controller {
         tenkhach.setCellValueFactory(c -> c.getValue().nameProperty());
         dienthoai.setCellValueFactory(c -> c.getValue().phoneNumberProperty());
         diachi.setCellValueFactory(c -> c.getValue().addressProperty());
-        maTD.setCellValueFactory(c -> c.getValue().cardNumberProperty());
-        maTM.setCellValueFactory(c -> c.getValue().cardNumberProperty());
+        maTD.setCellValueFactory(c -> c.getValue().getThedoc().cardNumberProperty());
+        maTM.setCellValueFactory(c -> c.getValue().getThemuon().cardNumberProperty());
     }
 
 
@@ -148,17 +133,25 @@ public class Guest_information_Controller {
             throw e;
         }
     }
-//    @FXML
-//    void save_customer() throws SQLException,ClassNotFoundException {
-//        try {
-//            String CMND = (String) ma_khach.getSelectionModel().getSelectedItem();
-//            String name = ten_khach.getText();
-//            String address = dia_chi.getText();
-//            String phoneNumber = dien_thoai.getText();
-//            CustomerDB.updateCustomer(CMND, name, address, phoneNumber);
-//        } catch (SQLException e) {
-//            System.out.println(e);
-//            throw e;
-//        }
-//    }
+    @FXML
+    void search_customer() throws SQLException,ClassNotFoundException {
+        try {
+            String CMND = (String) ma_khach.getSelectionModel().getSelectedItem();
+
+            ObservableList<Customer> result = CustomerDB.search_customer_by_CMND(CMND);
+
+            table.setItems(result);
+
+        } catch (SQLException e) {
+            System.out.println(e);
+            throw e;
+        }
+    }
+    @FXML
+    private Button xong = new Button();
+    @FXML
+    public void close() {
+        Stage stage = (Stage) xong.getScene().getWindow();
+        stage.close();
+    }
 }

@@ -20,7 +20,7 @@ public class Main extends Application {
 
         root = FXMLLoader.load(getClass().getResource("view/Guest_information.fxml"));
         g.setMain(this);
-        this.primaryStage.setScene(new Scene(root, 576, 440));
+        this.primaryStage.setScene(new Scene(root, 602, 449));
         primaryStage.show();
     }
 

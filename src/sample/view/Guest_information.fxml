@@ -5,20 +5,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="440.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Guest_information_Controller">
+<AnchorPane prefHeight="449.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Guest_information_Controller">
    <children>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="33.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã khách" wrappingWidth="82.13671875">
+      <Text layoutX="28.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã khách" wrappingWidth="82.13671875">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="35.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Điện thoại">
+      <Text layoutX="29.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Điện thoại">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="30.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã thẻ đọc">
+      <Text layoutX="29.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã thẻ đọc">
          <font>
             <Font size="18.0" />
          </font>
@@ -28,12 +28,12 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="300.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ" wrappingWidth="107.9033203125">
+      <Text layoutX="307.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ" wrappingWidth="107.9033203125">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="300.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã thẻ mượn">
+      <Text layoutX="303.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã thẻ mượn">
          <font>
             <Font size="18.0" />
          </font>
@@ -44,13 +44,11 @@
       <TextField fx:id="ten_khach" layoutX="415.0" layoutY="122.0" />
       <TextField fx:id="dia_chi" layoutX="415.0" layoutY="167.0" />
       <TextField fx:id="ma_the_muon" layoutX="415.0" layoutY="210.0" />
-      <Button layoutX="32.0" layoutY="255.0" mnemonicParsing="false" onAction="#add_customer" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
-      <Button layoutX="141.0" layoutY="255.0" mnemonicParsing="false" onAction="#delete_customer" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
-      <Button layoutX="239.0" layoutY="255.0" mnemonicParsing="false" onAction="#update_customer" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
-      <Button fx:id="luu" layoutX="335.0" layoutY="255.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="64.0" text="Lưu" />
-      <Button fx:id="tim_kiem" layoutX="439.0" layoutY="255.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
-      <Button fx:id="chap_nhan" layoutX="150.0" layoutY="403.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Chấp nhận" />
-      <Button fx:id="huy" layoutX="372.0" layoutY="403.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Hủy" />
+      <Button layoutX="57.0" layoutY="255.0" mnemonicParsing="false" onAction="#add_customer" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
+      <Button layoutX="131.0" layoutY="255.0" mnemonicParsing="false" onAction="#delete_customer" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
+      <Button layoutX="208.0" layoutY="255.0" mnemonicParsing="false" onAction="#update_customer" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
+      <Button layoutX="282.0" layoutY="255.0" mnemonicParsing="false" onAction="#search_customer" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
+      <Button layoutX="511.0" layoutY="414.0" mnemonicParsing="false" onAction="#close" prefHeight="0.0" prefWidth="82.0" text="Xong" fx:id="xong" />
       <Text layoutX="151.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý thông tin khách" wrappingWidth="462.7016296386719">
          <font>
             <Font name="Elephant" size="24.0" />
