@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2021 at 11:43 AM
+-- Generation Time: May 03, 2021 at 03:16 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -98,15 +98,24 @@ CREATE TABLE `customers` (
   `Age` int(100) NOT NULL,
   `Address` varchar(50) NOT NULL,
   `PhoneNumber` varchar(50) NOT NULL,
-  `MSPM` varchar(50) DEFAULT NULL
+  `MSPM` varchar(50) DEFAULT NULL,
+  `mathedoc` varchar(50) DEFAULT NULL,
+  `mathemuon` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `customers`
 --
 
-INSERT INTO `customers` (`CMND`, `Name`, `Age`, `Address`, `PhoneNumber`, `MSPM`) VALUES
-('1', 'zed', 20, 'ilonia', '0987654321', NULL);
+INSERT INTO `customers` (`CMND`, `Name`, `Age`, `Address`, `PhoneNumber`, `MSPM`, `mathedoc`, `mathemuon`) VALUES
+('1', 'zed', 20, 'ilonia', 'aaaaaa', NULL, NULL, NULL),
+('11', 'viego', 20, 'quan dao bong dem', '1111', NULL, 'ddddd', 'eeeeee'),
+('12', 'ggg', 20, 'gg', 'a', NULL, NULL, 'gg'),
+('2', 'vvvvv', 20, 'vvvvv', 'vvvvv', NULL, NULL, NULL),
+('3', 'akali', 20, 'ilonia', 'aaaaaasdv', NULL, NULL, NULL),
+('4', 'kennen', 20, 'ilonia', '2345678', NULL, NULL, NULL),
+('5', 'shen', 20, 'ilonia', 'aaaaaasdvassdfg', NULL, NULL, NULL),
+('7', 'b', 22, 'c', 'c', NULL, 'c', NULL);
 
 -- --------------------------------------------------------
 
