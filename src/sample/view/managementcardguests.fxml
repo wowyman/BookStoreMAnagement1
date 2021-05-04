@@ -31,7 +31,7 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <TextField fx:id="mathe" layoutX="163.0" layoutY="122.0" onAction="#handle" prefHeight="31.0" prefWidth="125.0" />
+        <TextField fx:id="mathe" layoutX="163.0" layoutY="122.0" onAction="#handle" prefHeight="31.0" prefWidth="125.0" promptText="1" />
         <Button fx:id="them" layoutX="60.0" layoutY="243.0" mnemonicParsing="false" onAction="#them_But" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
         <Button layoutX="203.0" layoutY="243.0" mnemonicParsing="false" onAction="#xoa_but" prefHeight="25.0" prefWidth="64.0" text="Xóa" fx:id="xoa" />
         <Button fx:id="sua" layoutX="312.0" layoutY="243.0" mnemonicParsing="false" onAction="#sua_but" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
@@ -43,8 +43,8 @@
                 <Font name="Elephant" size="24.0" />
             </font>
         </Text>
-      <ComboBox fx:id="loaithe" layoutX="165.0" layoutY="167.0" prefHeight="31.0" prefWidth="125.0" promptText="the muon" />
-      <ComboBox fx:id="makhach" layoutX="420.0" layoutY="167.0" onAction="#handle" prefWidth="150.0" />
-      <DatePicker fx:id="ngaycap" layoutX="423.0" layoutY="118.0" prefHeight="31.0" prefWidth="150.0" />
+      <ComboBox fx:id="loaithe" layoutX="165.0" layoutY="167.0" onAction="#handle" onMouseClicked="#handle_loaithe" prefHeight="31.0" prefWidth="125.0" promptText="the muon" />
+      <ComboBox fx:id="makhach" layoutX="420.0" layoutY="167.0" onMouseClicked="#handle_makhach" onMousePressed="#handle_makhach" prefWidth="150.0" promptText="0" />
+      <DatePicker fx:id="ngaycap" layoutX="423.0" layoutY="118.0" onMouseClicked="#handle_ngaycap" prefHeight="31.0" prefWidth="150.0" promptText="05-05-2021" />
     </children>
 </AnchorPane>
