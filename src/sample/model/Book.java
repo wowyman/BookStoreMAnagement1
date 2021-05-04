@@ -16,6 +16,7 @@ public class Book {
     private final IntegerProperty price;
     private final IntegerProperty soLuong;
     private Kho kho;
+    private IntegerProperty thanhtien;
 
     //Constructor
     public Book() {
@@ -29,6 +30,7 @@ public class Book {
         price = new SimpleIntegerProperty();
         soLuong = new SimpleIntegerProperty();
         kho = new Kho();
+
     }
 
     //BookId
@@ -165,5 +167,19 @@ public class Book {
 
     public void setKho(String tenkho) {
         this.kho.setTenKho(tenkho);
+    }
+    //thanhtien
+
+
+    public void setThanhtien(int thanhtien) {
+        this.thanhtien.set(thanhtien);
+    }
+
+    public int getThanhtien() {
+        return thanhtien.get();
+    }
+
+    public IntegerProperty thanhtienProperty() {
+        return thanhtien;
     }
 }

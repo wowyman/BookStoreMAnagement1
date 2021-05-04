@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.shape.*?>
-<?import javafx.embed.swing.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.chart.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="513.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="513.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="300.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày lập" wrappingWidth="116.13671875">
@@ -34,7 +27,7 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <TextField layoutX="143.0" layoutY="165.0" prefHeight="25.0" prefWidth="130.0" />
+        <TextField layoutX="143.0" layoutY="165.0" prefHeight="25.0" prefWidth="130.0" text="comming soon" />
         <Button layoutX="6.0" layoutY="257.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
         <Button layoutX="165.0" layoutY="257.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="In" />
         <Button layoutX="339.0" layoutY="257.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="64.0" text="Lưu" />

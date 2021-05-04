@@ -9,12 +9,16 @@ public class PhieuNhap {
     private StringProperty MSPN;
     private StringProperty ngayNhap;
     private IntegerProperty tongGiaTri;
+    private NCC ncc;
+    private Employee e;
 
     //Constructor
     public PhieuNhap() {
         MSPN = new SimpleStringProperty();
         ngayNhap = new SimpleStringProperty();
         tongGiaTri = new SimpleIntegerProperty();
+        ncc = new NCC();
+        e = new Employee();
     }
 
     //MSPN
@@ -56,5 +60,24 @@ public class PhieuNhap {
 
     public IntegerProperty tongGiaTriProperty() {
         return tongGiaTri;
+    }
+    //NCC
+
+    public NCC getNcc() {
+        return ncc;
+    }
+
+    public void setNcc(String maNCC) {
+        this.ncc.setMaNCC(maNCC);
+    }
+    //Employee
+
+
+    public Employee getE() {
+        return e;
+    }
+
+    public void setE(String maNV) {
+        this.e.setMSNV(maNV);
     }
 }

@@ -14,8 +14,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import sample.model.Book;
 import sample.model.BookDB;
-import sample.model.Employee;
-import sample.model.EmployeeDB;
 
 import java.sql.SQLException;
 
@@ -85,7 +83,7 @@ public class searchbook {
     Button thoat,nhapmoi,chon;
     public void thoat_button(){
         try {
-            AnchorPane root1 = FXMLLoader.load(getClass().getResource("/src/sample/view/Menu.fxml"));
+            AnchorPane root1 = FXMLLoader.load(getClass().getResource("//src//sample//view//Menu.fxml"));
             Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.setTitle("Menu ");
