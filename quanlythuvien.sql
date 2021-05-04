@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2021 at 03:16 PM
+-- Generation Time: May 04, 2021 at 05:26 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -50,17 +50,18 @@ CREATE TABLE `book` (
   `namXB` date NOT NULL,
   `tap` varchar(50) NOT NULL,
   `price` decimal(10,0) NOT NULL,
-  `soLuong` varchar(50) NOT NULL
+  `soLuong` varchar(50) NOT NULL,
+  `tenKho` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `book`
 --
 
-INSERT INTO `book` (`bookId`, `bookTitle`, `authorName`, `XBlan`, `theLoai`, `namXB`, `tap`, `price`, `soLuong`) VALUES
-('1', 'quy thu morello', 'phap su', '1', 'lol', '2001-10-01', '1', '3000', '1'),
-('2', 'mu phu thuy rabadon', 'phap su', '1', 'lollllll', '2020-01-01', '2', '3600', '1'),
-('3', 'sung hai tac', 'missFortune', '1', 'lolllll', '2020-01-01', '1', '3000', '1');
+INSERT INTO `book` (`bookId`, `bookTitle`, `authorName`, `XBlan`, `theLoai`, `namXB`, `tap`, `price`, `soLuong`, `tenKho`) VALUES
+('1', 'quy thu morello', 'phap su', '1', 'lol', '2001-10-01', '1', '3000', '1', NULL),
+('2', 'mu phu thuy rabadon', 'phap su', '1', 'lollllll', '2020-01-01', '2', '3600', '1', NULL),
+('4', 'ssss', 'sssss', '1', 'sss', '2020-02-02', '1', '111', '1', '3');
 
 -- --------------------------------------------------------
 
@@ -85,6 +86,14 @@ CREATE TABLE `chucvu` (
   `MSCV` varchar(50) NOT NULL,
   `tenCV` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `chucvu`
+--
+
+INSERT INTO `chucvu` (`MSCV`, `tenCV`) VALUES
+('2', 'chainsawman'),
+('1', 'chairman');
 
 -- --------------------------------------------------------
 
@@ -112,7 +121,6 @@ INSERT INTO `customers` (`CMND`, `Name`, `Age`, `Address`, `PhoneNumber`, `MSPM`
 ('11', 'viego', 20, 'quan dao bong dem', '1111', NULL, 'ddddd', 'eeeeee'),
 ('12', 'ggg', 20, 'gg', 'a', NULL, NULL, 'gg'),
 ('2', 'vvvvv', 20, 'vvvvv', 'vvvvv', NULL, NULL, NULL),
-('3', 'akali', 20, 'ilonia', 'aaaaaasdv', NULL, NULL, NULL),
 ('4', 'kennen', 20, 'ilonia', '2345678', NULL, NULL, NULL),
 ('5', 'shen', 20, 'ilonia', 'aaaaaasdvassdfg', NULL, NULL, NULL),
 ('7', 'b', 22, 'c', 'c', NULL, 'c', NULL);
@@ -125,7 +133,7 @@ INSERT INTO `customers` (`CMND`, `Name`, `Age`, `Address`, `PhoneNumber`, `MSPM`
 
 CREATE TABLE `employee` (
   `MSNV` varchar(50) NOT NULL,
-  `name` varchar(50) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
   `gioiTinh` varchar(50) NOT NULL,
   `ngaySinh` date NOT NULL,
   `address` varchar(50) NOT NULL,
@@ -141,7 +149,8 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`MSNV`, `name`, `gioiTinh`, `ngaySinh`, `address`, `phoneNumber`, `queQuan`, `salary`, `maKho`, `MSCV`) VALUES
-('1', 'daxua', 'poi', '2001-01-01', 'ilonia', '000111002', 'ilonia', '9999', NULL, NULL);
+('1', 'daxua', 'poi', '2001-01-01', 'ilonia', '000111002', 'ilonia', '9999', '2', NULL),
+('2', 'ffff', 'nam', '2021-03-30', 'ffff', '2021-03-30', 'Viet Nam', '5555', '2', NULL);
 
 -- --------------------------------------------------------
 
@@ -153,8 +162,36 @@ CREATE TABLE `kho` (
   `maKho` varchar(50) NOT NULL,
   `tenKho` varchar(50) NOT NULL,
   `theLoai` varchar(50) NOT NULL,
-  `MSPX` varchar(50) NOT NULL
+  `MSPX` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kho`
+--
+
+INSERT INTO `kho` (`maKho`, `tenKho`, `theLoai`, `MSPX`) VALUES
+('1', '1', 'lol', NULL),
+('2', '2', 'lollllll', NULL),
+('3', '3', 'lolllll', NULL),
+('4', '4', 'lollllll', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `USERID` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`USERID`, `pass`) VALUES
+('user', '123');
 
 -- --------------------------------------------------------
 
@@ -170,6 +207,15 @@ CREATE TABLE `ncc` (
   `email` varchar(50) NOT NULL,
   `fax` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `ncc`
+--
+
+INSERT INTO `ncc` (`maNCC`, `name`, `address`, `phoneNumber`, `email`, `fax`) VALUES
+('1', 'ffff', 'ffff', 'fff', 'ffff', 'ffff'),
+('2', '222', '11222', '1122', '1112', '111222'),
+('4', 'ccc', 'ccc', 'ccc', 'ccc', 'cccc');
 
 -- --------------------------------------------------------
 
@@ -254,6 +300,29 @@ CREATE TABLE `thekho` (
   `maKho` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `quyensudung` varchar(50) NOT NULL,
+  `tendangnhap` varchar(50) NOT NULL,
+  `matkhau` varchar(50) NOT NULL,
+  `tenCV` varchar(50) DEFAULT NULL,
+  `name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`quyensudung`, `tendangnhap`, `matkhau`, `tenCV`, `name`) VALUES
+('admin', 'aaa', 'aaa', 'chairman', 'ffff'),
+('nhân viên', 'd', 'ddd', 'chairman', 'daxua'),
+('nhân viên', 'dd', 'dd', 'chainsawman', 'ffff');
+
 --
 -- Indexes for dumped tables
 --
@@ -270,8 +339,8 @@ ALTER TABLE `author`
 --
 ALTER TABLE `book`
   ADD PRIMARY KEY (`bookId`),
-  ADD KEY `theLoai` (`theLoai`),
-  ADD KEY `authorName` (`authorName`);
+  ADD KEY `authorName` (`authorName`),
+  ADD KEY `tenKho` (`tenKho`);
 
 --
 -- Indexes for table `card`
@@ -284,7 +353,8 @@ ALTER TABLE `card`
 -- Indexes for table `chucvu`
 --
 ALTER TABLE `chucvu`
-  ADD PRIMARY KEY (`MSCV`);
+  ADD PRIMARY KEY (`MSCV`),
+  ADD KEY `tenCV` (`tenCV`);
 
 --
 -- Indexes for table `customers`
@@ -298,6 +368,7 @@ ALTER TABLE `customers`
 --
 ALTER TABLE `employee`
   ADD PRIMARY KEY (`MSNV`),
+  ADD UNIQUE KEY `name` (`name`),
   ADD KEY `fk11` (`maKho`),
   ADD KEY `fk12` (`MSCV`);
 
@@ -306,8 +377,14 @@ ALTER TABLE `employee`
 --
 ALTER TABLE `kho`
   ADD PRIMARY KEY (`maKho`),
-  ADD KEY `fk8` (`theLoai`),
-  ADD KEY `fk10` (`MSPX`);
+  ADD KEY `fk10` (`MSPX`),
+  ADD KEY `tenKho` (`tenKho`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`USERID`);
 
 --
 -- Indexes for table `ncc`
@@ -360,6 +437,14 @@ ALTER TABLE `thekho`
   ADD KEY `fk19` (`MSPN`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`tendangnhap`),
+  ADD KEY `l` (`name`),
+  ADD KEY `fff` (`tenCV`);
+
+--
 -- Constraints for dumped tables
 --
 
@@ -368,6 +453,12 @@ ALTER TABLE `thekho`
 --
 ALTER TABLE `author`
   ADD CONSTRAINT `fk9` FOREIGN KEY (`authorName`) REFERENCES `book` (`authorName`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `book`
+--
+ALTER TABLE `book`
+  ADD CONSTRAINT `fk8` FOREIGN KEY (`tenKho`) REFERENCES `kho` (`tenKho`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `card`
@@ -392,8 +483,7 @@ ALTER TABLE `employee`
 -- Constraints for table `kho`
 --
 ALTER TABLE `kho`
-  ADD CONSTRAINT `fk10` FOREIGN KEY (`MSPX`) REFERENCES `phieuxuat` (`MSPX`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk8` FOREIGN KEY (`theLoai`) REFERENCES `book` (`theLoai`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk10` FOREIGN KEY (`MSPX`) REFERENCES `phieuxuat` (`MSPX`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `phieugiaoca`
@@ -422,6 +512,13 @@ ALTER TABLE `phieunhap`
 ALTER TABLE `thekho`
   ADD CONSTRAINT `fk19` FOREIGN KEY (`MSPN`) REFERENCES `phieunhap` (`MSPN`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk6` FOREIGN KEY (`MSPM`) REFERENCES `phieumuon` (`MSPM`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `fff` FOREIGN KEY (`tenCV`) REFERENCES `chucvu` (`tenCV`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `l` FOREIGN KEY (`name`) REFERENCES `employee` (`name`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
