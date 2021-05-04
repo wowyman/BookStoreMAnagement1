@@ -8,10 +8,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CustomerDB {
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
-
-
-    }
+//    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+//
+//
+//    }
 
 
     public static void insertCustomer(String CMND, String name, String age, String address, String phoneNumber,String mathedoc_,String mathemuon_) throws SQLException, ClassNotFoundException {

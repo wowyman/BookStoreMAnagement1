@@ -8,20 +8,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class EmployeeDB {
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
-
-        //insertEmployee("2","yone","poi","2000-1-1","ilonia","000111001","ilonia","2222");
-        //deleteWithEmployeeMSNV("2");
-        //System.out.println(searchEmployees().get(0).getName());
-        updateSalary("1","9999");
-    }
+//
 
 
-    public static void insertEmployee(String MSNV, String name, String gioiTinh, String ngaySinh, String address, String phoneNumber, String queQuan, String salary) throws SQLException, ClassNotFoundException {
+    public static void insertEmployee(String MSNV, String name, String gioiTinh, String ngaySinh, String address, String phoneNumber, String queQuan, String salary,String makho) throws SQLException, ClassNotFoundException {
 
         String insertStmt =
                 "INSERT INTO `employee` (`MSNV`, `name`, `gioiTinh`, `ngaySinh`, `address`, `phoneNumber`,`queQuan`,`salary`,`maKho`,`MSCV`) VALUES ('" +
-                        MSNV + "', '" + name + "', '" + gioiTinh + "', '" + ngaySinh + "', '" + address + "', '" + phoneNumber + "', '" + queQuan + "', '" + salary + "', NULL, NULL);";
+                        MSNV + "', '" + name + "', '" + gioiTinh + "', '" + ngaySinh + "', '" + address + "', '" + phoneNumber + "', '" + queQuan + "', '" + salary + "', '"+ makho + "', NULL);";
 
 
         //Execute INSERT operation
@@ -51,22 +45,24 @@ public class EmployeeDB {
         }
     }
 
-    public static Employee searchEmployee(String MSNV) throws SQLException, ClassNotFoundException {
+    public static ObservableList<Employee> searchEmployee_byMSNV(String MSNV) throws SQLException, ClassNotFoundException {
         //Declare a SELECT statement
         String selectStmt = "SELECT * FROM employee WHERE MSNV=" + MSNV;
 
         //Execute SELECT statement
         try {
             //Get ResultSet from dbExecuteQuery method
-            ResultSet rsEmp = DBUtil.dbExecuteQuery(selectStmt);
+            ResultSet rs = DBUtil.dbExecuteQuery(selectStmt);
+            if (!rs.next()) {
+                System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa ");
 
-            //Send ResultSet to the getEmployeeFromResultSet method and get employee object
-            Employee employee = getEmployeeFromResultSet(rsEmp);
+            }
+            rs.beforeFirst();
 
-            //Return employee object
-            return employee;
+
+            return getEmployeeList(rs);
         } catch (SQLException e) {
-            System.out.println("Xay ra loi khi tim kiem nhan vien co MSNV : " + MSNV + ". " + e);
+            System.out.println("SQL select operation has been failed: " + e);
             //Return exception
             throw e;
         }
@@ -84,6 +80,7 @@ public class EmployeeDB {
             emp.setQueQuan(rs.getString("queQuan"));
             emp.setNgaySinh(rs.getString("ngaySinh"));
             emp.setSalary(rs.getInt("salary"));
+            emp.setKho(rs.getString("maKho"));
         }
         return emp;
     }
@@ -102,6 +99,7 @@ public class EmployeeDB {
             emp.setQueQuan(rs.getString("queQuan"));
             emp.setNgaySinh(rs.getString("ngaySinh"));
             emp.setSalary(rs.getInt("salary"));
+            emp.setKho(rs.getString("maKho"));
             //Add employee to the ObservableList
             empList.add(emp);
         }
@@ -140,6 +138,30 @@ public class EmployeeDB {
         try {
             DBUtil.dbExecuteUpdate(updateStmt);
             System.out.println("Update salary thanh cong");
+        } catch (SQLException e) {
+            System.out.print("Error occurred while UPDATE Operation: " + e);
+            throw e;
+        }
+    }
+
+    public static void updateEmployee(String manv, String name, String gioitinh,String ngaySinh,String address, String phoneNumber,String queQuan,String luong,String makho) throws SQLException, ClassNotFoundException {
+        //Declare a DELETE statement
+        String updateStmt =
+                "UPDATE `employee` SET `name` = '" + name +
+                        "', `gioiTinh` = '" + gioitinh +
+                        "', `ngaySinh` = '" + ngaySinh +
+                        "', `address` = '" + address +
+                        "', `phoneNumber` = '" + ngaySinh +
+                        "', `queQuan` = '" + queQuan +
+                        "', `salary` = '" + luong +
+                        "', `maKho` = '" + makho +
+                        "' WHERE `employee`.`MSNV` = '" + manv + "'";
+
+
+        //Execute UPDATE operation
+        try {
+            DBUtil.dbExecuteUpdate(updateStmt);
+            System.out.println("---------Update thanh cong-------------------------");
         } catch (SQLException e) {
             System.out.print("Error occurred while UPDATE Operation: " + e);
             throw e;

@@ -14,6 +14,8 @@ public class Employee {
     private StringProperty phoneNumber;
     private StringProperty queQuan;
     private IntegerProperty salary;
+    private ChucVu chucVu;
+    private Kho kho;
     //Constructor
     public Employee() {
         MSNV = new SimpleStringProperty();
@@ -24,6 +26,8 @@ public class Employee {
         phoneNumber = new SimpleStringProperty();
         queQuan = new SimpleStringProperty();
         salary = new SimpleIntegerProperty();
+        chucVu = new ChucVu();
+        kho = new Kho();
 
     }
     //MSNV
@@ -114,7 +118,7 @@ public class Employee {
     }
 
     //Salary
-    public void setSalary(int salary) {
+    public void setSalary(Integer salary) {
         this.salary.set(salary);
     }
 
@@ -124,5 +128,24 @@ public class Employee {
 
     public IntegerProperty salaryProperty() {
         return salary;
+    }
+
+    //chucvu
+
+    public void setChucVu(String chucVu) {
+        this.chucVu.setTenCV(chucVu);
+    }
+
+    public ChucVu getChucVu() {
+        return chucVu;
+    }
+    //kho
+
+    public Kho getKho() {
+        return kho;
+    }
+
+    public void setKho(String kho) {
+        this.kho.setTenKho(kho);
     }
 }

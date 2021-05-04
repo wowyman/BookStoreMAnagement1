@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="513.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="514.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Employee_controller">
     <children>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="17.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhân viên" wrappingWidth="116.13671875">
@@ -22,7 +22,7 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="299.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên khách">
+        <Text layoutX="299.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nhân viên">
             <font>
                 <Font size="18.0" />
             </font>
@@ -37,142 +37,53 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <TextField layoutX="141.0" layoutY="167.0" prefHeight="25.0" prefWidth="130.0" />
-        <TextField layoutX="415.0" layoutY="122.0" prefHeight="25.0" prefWidth="130.0" />
-        <TextField layoutX="415.0" layoutY="167.0" prefHeight="25.0" prefWidth="130.0" />
-        <Button layoutX="8.0" layoutY="328.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
-        <Button layoutX="120.0" layoutY="328.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
-        <Button layoutX="241.0" layoutY="328.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
-        <Button layoutX="367.0" layoutY="328.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="64.0" text="Lưu" />
-        <Button layoutX="500.0" layoutY="328.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
-        <Button layoutX="152.0" layoutY="474.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Chấp nhận" />
-        <Button layoutX="380.0" layoutY="474.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Hủy" />
+        <TextField fx:id="dien_thoai" layoutX="141.0" layoutY="167.0" prefHeight="25.0" prefWidth="130.0" />
+        <TextField fx:id="ten_nv" layoutX="415.0" layoutY="122.0" prefHeight="25.0" prefWidth="130.0" />
+        <TextField fx:id="dia_chi" layoutX="415.0" layoutY="167.0" prefHeight="25.0" prefWidth="130.0" />
+        <Button layoutX="32.0" layoutY="328.0" mnemonicParsing="false" onAction="#add_employee" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
+        <Button layoutX="174.0" layoutY="328.0" mnemonicParsing="false" onAction="#delete_employee" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
+        <Button layoutX="322.0" layoutY="328.0" mnemonicParsing="false" onAction="#update_employee" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
+        <Button layoutX="446.0" layoutY="328.0" mnemonicParsing="false" onAction="#search_employee" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
+        <Button layoutX="519.0" layoutY="481.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="90.0" text="Xong" fx:id="xong" />
         <Text layoutX="152.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý thông tin nhân viên" wrappingWidth="462.7016296386719">
             <font>
                 <Font name="Elephant" size="24.0" />
             </font>
         </Text>
         <Text layoutX="8.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khách" />
-        <ChoiceBox layoutX="143.0" layoutY="122.0" prefHeight="25.0" prefWidth="130.0" />
-      <ChoiceBox layoutX="142.0" layoutY="210.0" prefHeight="25.0" prefWidth="130.0" />
-      <ChoiceBox layoutX="415.0" layoutY="211.0" prefHeight="25.0" prefWidth="130.0" />
       <Text layoutX="23.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lương ">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="23.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nơi làm việc">
+      <Text layoutX="299.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nơi làm việc">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="300.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+      <Text layoutX="30.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giới tính">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="299.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giới tính">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <TextField layoutX="141.0" layoutY="253.0" prefHeight="25.0" prefWidth="130.0" />
-      <TextField layoutX="415.0" layoutY="253.0" prefHeight="25.0" prefWidth="130.0" />
-      <ChoiceBox layoutX="143.0" layoutY="300.0" prefHeight="25.0" prefWidth="130.0" />
-      <CheckBox layoutX="408.0" layoutY="304.0" mnemonicParsing="false" text="Nam" />
-      <CheckBox layoutX="481.0" layoutY="304.0" mnemonicParsing="false" text="Nữ" />
-      <ScrollPane layoutX="6.0" layoutY="375.0" prefHeight="97.0" prefWidth="568.0">
-         <content>
-            <MenuBar prefHeight="25.0" prefWidth="1054.0">
-              <menus>
-                <Menu mnemonicParsing="false" text="Mã NV">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Họ tên">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Địa chỉ">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-                  <Menu mnemonicParsing="false" text="Điện thoại">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="Close" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="chức vụ">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="Close" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Ngày sinh">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Nơi làm việc">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Giới tính">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Email">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Lương">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Thêm">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Xóa">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Sửa">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Lưu">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Tìm kiếm">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Chấp nhận">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Hủy">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="About" />
-                     </items>
-                  </Menu>
-              </menus>
-            </MenuBar>
-         </content>
-      </ScrollPane>
+      <TextField fx:id="luong" layoutX="141.0" layoutY="253.0" prefHeight="25.0" prefWidth="130.0" />
+      <CheckBox fx:id="nam" layoutX="141.0" layoutY="303.0" mnemonicParsing="false" text="Nam" />
+      <CheckBox fx:id="nu" layoutX="206.0" layoutY="303.0" mnemonicParsing="false" text="Nữ" />
+      <ComboBox fx:id="ma_nv" layoutX="141.0" layoutY="121.0" prefHeight="25.0" prefWidth="130.0" />
+      <TableView fx:id="table" layoutX="3.0" layoutY="377.0" prefHeight="93.0" prefWidth="609.0">
+        <columns>
+          <TableColumn fx:id="manv" prefWidth="70.0" text="Mã nv" />
+            <TableColumn fx:id="tennv" prefWidth="73.0" text="Tên nv" />
+            <TableColumn fx:id="dienthoai" prefWidth="74.0" text="Điện thoại" />
+            <TableColumn fx:id="diachi" prefWidth="90.0" text="Địa chỉ" />
+            <TableColumn fx:id="ngaysinh" prefWidth="69.0" text="Ngày sinh" />
+            <TableColumn fx:id="chucvu" prefWidth="78.0" text="Chức vụ" />
+            <TableColumn fx:id="Luong" prefWidth="72.0" text="Lương" />
+            <TableColumn fx:id="noilamviec" prefWidth="82.0" text="Nơi làm việc" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="ngay_sinh" layoutX="415.0" layoutY="210.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="130.0" promptText="yyyy-mm-dd" />
+      <ChoiceBox fx:id="chuc_vu" layoutX="141.0" layoutY="210.0" prefHeight="25.0" prefWidth="130.0" />
+      <ChoiceBox fx:id="noi_lam_viec" layoutX="415.0" layoutY="253.0" prefHeight="25.0" prefWidth="130.0" />
     </children>
 </AnchorPane>

@@ -14,7 +14,7 @@ import sample.model.*;
 
 import java.sql.SQLException;
 
-public class Book_supplier {
+public class Book_supplier_controller {
     public static Main main;
 
     public static void setMain(Main main_) {
