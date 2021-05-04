@@ -1,18 +1,16 @@
 package sample.controller;
 
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sample.model.Employee;
 import sample.model.EmployeeDB;
+
 import java.sql.SQLException;
 
 public class searchemployee {
@@ -20,18 +18,17 @@ public class searchemployee {
     TextField tennhanvien;
     @FXML
     TextField noilamviec;
+
     @FXML
-    TableView<Employee> employeeTableView ;
-    String tnv;
-    String nlv;
+    private TableView<Employee> table = new TableView<Employee>();
     @FXML
-    TableColumn<Employee, Integer> msnv_col;
+    TableColumn<Employee, String> msnv_col;
     @FXML
     TableColumn<Employee, String> name_col;
     @FXML
     TableColumn<Employee, String> gioitinh_col;
     @FXML
-    TableColumn<Employee, Integer> dienthoai_col;
+    TableColumn<Employee, String> dienthoai_col;
     @FXML
     TableColumn<Employee, String> diachi_col;
     @FXML
@@ -40,72 +37,42 @@ public class searchemployee {
     TableColumn<Employee, String> noilamviec_col;
     @FXML
     TableColumn<Employee, String> chucvu_col;
-    @FXML
-    TableColumn<Employee, String> email_col;
-    @FXML
-    TableColumn<Employee, Integer> luong_col;
-    ObservableList<Employee> true_list1 = FXCollections.observableArrayList();
-    ObservableList<Employee> true_list2 = FXCollections.observableArrayList();
-    @FXML
-    public void handle_tnv() throws SQLException, ClassNotFoundException {
-        ObservableList<Employee> listView = EmployeeDB.searchEmployees();
-        tnv = tennhanvien.getText();
-        System.out.println(listView.get(0).getName());
-        System.out.println(listView.size());
 
-        msnv_col.setCellValueFactory(new PropertyValueFactory<Employee, Integer>("MSNV"));
-        name_col.setCellValueFactory(new PropertyValueFactory<Employee,String>("name"));
-        dienthoai_col.setCellValueFactory(new PropertyValueFactory<Employee,Integer>("phoneNumber"));
-        diachi_col.setCellValueFactory(new PropertyValueFactory<Employee,String>("address"));
-        //chucvu_col.setCellValueFactory(new PropertyValueFactory<Employee,String>("Chức vụ"));
-        ngaysinh_col.setCellValueFactory(new PropertyValueFactory<Employee,String>("ngaySinh"));
-        noilamviec_col.setCellValueFactory(new PropertyValueFactory<Employee,String>("queQuan"));
-        gioitinh_col.setCellValueFactory(new PropertyValueFactory<Employee,String>("gioiTinh"));
-        //email_col.setCellValueFactory(new PropertyValueFactory<Employee,String>("Email"));
-        luong_col.setCellValueFactory(new PropertyValueFactory<Employee,Integer>("salary"));
-        for (Employee employee : listView) {
-            if (tnv.equals(employee.getName())) {
-                true_list1.add(employee);
-                System.out.println("ss");
-                employeeTableView.setItems(true_list1);
-            }
-        }
+    @FXML
+    TableColumn<Employee, String> luong_col;
+
+
+    @FXML
+    void initialize() throws SQLException, ClassNotFoundException {
+
+        msnv_col.setCellValueFactory(c -> c.getValue().MSNVProperty());
+        name_col.setCellValueFactory(c -> c.getValue().nameProperty());
+        gioitinh_col.setCellValueFactory(c -> c.getValue().gioiTinhProperty());
+        dienthoai_col.setCellValueFactory(c -> c.getValue().phoneNumberProperty());
+        diachi_col.setCellValueFactory(c -> c.getValue().addressProperty());
+        ngaysinh_col.setCellValueFactory(c -> c.getValue().ngaySinhProperty());
+        noilamviec_col.setCellValueFactory(c -> c.getValue().getKho().tenKhoProperty());
+        chucvu_col.setCellValueFactory(c -> c.getValue().getChucVu().tenCVProperty());
+        luong_col.setCellValueFactory(c -> c.getValue().salaryProperty().asString());
+    }
+
+
+    @FXML
+    void search() throws SQLException, ClassNotFoundException {
+        String ten = tennhanvien.getText();
+        String noi = noilamviec.getText();
+        ObservableList<Employee> e = EmployeeDB.searchEmployee(ten,noi);
+        table.setItems(e);
+
 
     }
+
     @FXML
-    public void handle_nlv() {
-        nlv = noilamviec.getText();
-        for (Employee employee : true_list1) {
-            if (nlv.equals(employee.getQueQuan())) {
-                true_list2.add(employee);
-                System.out.println("ss");
-                employeeTableView.getItems().clear();
-                employeeTableView.setItems(true_list2);
-            }
-        }
-    }
+    private Button xong = new Button();
     @FXML
-    Button thoat,nhapmoi,chon;
-    public void thoat_button(){
-        try {
-            AnchorPane root1 = FXMLLoader.load(getClass().getResource("/src/sample/view/Menu.fxml"));
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.setTitle("Menu ");
-            stage.show();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+    public void close() {
+        Stage stage = (Stage) xong.getScene().getWindow();
+        stage.close();
     }
-    public void nhapmoi_button(){
-        try {
-            AnchorPane root1 = FXMLLoader.load(getClass().getResource("/src/sample/view/Employee.fxml"));
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.setTitle("thong tin nhan vien ");
-            stage.show();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-    }
+
 }

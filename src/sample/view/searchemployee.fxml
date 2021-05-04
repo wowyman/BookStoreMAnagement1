@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="398.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.searchemployee">
+<AnchorPane prefHeight="398.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.searchemployee">
     <children>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="19.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nhân viên" wrappingWidth="130.0">
@@ -16,35 +12,33 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <Button fx:id="thoat" layoutX="60.0" layoutY="341.0" mnemonicParsing="false" onAction="#thoat_button" prefHeight="25.0" prefWidth="90.0" text="Thoát" />
-        <Button fx:id="nhapmoi" layoutX="272.0" layoutY="341.0" mnemonicParsing="false" onAction="#nhapmoi_button" prefHeight="25.0" prefWidth="90.0" text="Nhập mới" />
-        <Text layoutX="160.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tìm kiếm nhân viên" wrappingWidth="345.7016296386719">
+        <Button layoutX="525.0" layoutY="352.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="90.0" text="Thoát" fx:id="xong" />
+        <Text layoutX="179.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tìm kiếm nhân viên" wrappingWidth="345.7016296386719">
             <font>
                 <Font name="Elephant" size="24.0" />
             </font>
         </Text>
         <Text layoutX="19.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin nhân viên" />
-        <TextField fx:id="tennhanvien" layoutX="160.0" layoutY="122.0" onAction="#handle_tnv" prefHeight="25.0" prefWidth="130.0" />
-        <Button fx:id="chon" layoutX="427.0" layoutY="341.0" mnemonicParsing="false" onAction="#nhapmoi_button" prefHeight="25.0" prefWidth="90.0" text="Chọn" />
-        <TableView fx:id="employeeTableView" layoutX="1.0" layoutY="226.0" onKeyPressed="#handle_tnv" prefHeight="111.0" prefWidth="633.0">
+        <TextField fx:id="tennhanvien" layoutX="160.0" layoutY="122.0" prefHeight="25.0" prefWidth="130.0" promptText="name" />
+        <Button layoutX="272.0" layoutY="174.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="90.0" text="Tìm kiếm" />
+        <TableView fx:id="table" layoutX="1.0" layoutY="226.0" prefHeight="111.0" prefWidth="633.0">
             <columns>
-                <TableColumn fx:id="msnv_col" prefWidth="62.0" text="Mã NV" />
-                <TableColumn fx:id="name_col" prefWidth="60.0" text="Họ tên" />
-                <TableColumn fx:id="dienthoai_col" prefWidth="64.0" text="Điện thoại" />
-                <TableColumn fx:id="diachi_col" prefWidth="64.0" text="Địa chỉ" />
-                <TableColumn fx:id="chucvu_col" prefWidth="52.0" text="Chức vụ" />
-                <TableColumn fx:id="ngaysinh_col" prefWidth="73.0" text="Ngày sinh" />
-            <TableColumn fx:id="noilamviec_col" text="Nơi làm việc" />
-            <TableColumn fx:id="gioitinh_col" prefWidth="72.0" text="Giới tính" />
-            <TableColumn fx:id="email_col" prefWidth="50.0" text="Email" />
-            <TableColumn fx:id="luong_col" prefWidth="50.0" text="Lương" />
+                <TableColumn fx:id="msnv_col" prefWidth="45.0" text="Mã NV" />
+                <TableColumn fx:id="name_col" prefWidth="84.0" text="Họ tên" />
+                <TableColumn fx:id="gioitinh_col" prefWidth="68.0" text="Giới tính" />
+                <TableColumn fx:id="ngaysinh_col" prefWidth="65.0" text="Ngày sinh" />
+                <TableColumn fx:id="diachi_col" prefWidth="67.0" text="Địa chỉ" />
+                <TableColumn fx:id="dienthoai_col" prefWidth="89.0" text="Số điện thoại" />
+            <TableColumn fx:id="noilamviec_col" prefWidth="73.0" text="Nơi làm việc" />
+            <TableColumn fx:id="chucvu_col" prefWidth="77.0" text="Chức vụ" />
+            <TableColumn fx:id="luong_col" prefWidth="64.0" text="Lương" />
             </columns>
         </TableView>
-      <Text layoutX="308.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nơi làm việc" wrappingWidth="130.0">
+      <Text layoutX="340.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nơi làm việc" wrappingWidth="105.791015625">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="noilamviec" layoutX="452.0" layoutY="122.0" onAction="#handle_nlv" prefHeight="25.0" prefWidth="130.0" />
+      <TextField fx:id="noilamviec" layoutX="452.0" layoutY="122.0" prefHeight="25.0" prefWidth="130.0" promptText="maKho" />
     </children>
 </AnchorPane>

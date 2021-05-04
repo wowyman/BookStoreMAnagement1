@@ -168,4 +168,28 @@ public class EmployeeDB {
         }
     }
 
+    public static ObservableList<Employee> searchEmployee(String ten,String noi) throws SQLException, ClassNotFoundException {
+        //Declare a SELECT statement
+        String selectStmt = "SELECT * FROM employee WHERE `employee`.`name`='" + ten + "' " +
+                "AND `employee`.`maKho` ='" + noi + "'" ;
+
+        //Execute SELECT statement
+        try {
+            //Get ResultSet from dbExecuteQuery method
+            ResultSet rs = DBUtil.dbExecuteQuery(selectStmt);
+            if (!rs.next()) {
+                System.out.println("aaaaaaaaaaaaaasssaaaaaaaaaaaaaaa ");
+
+            }
+            rs.beforeFirst();
+
+
+            return getEmployeeList(rs);
+        } catch (SQLException e) {
+            System.out.println("SQL select operation has been failed: " + e);
+            //Return exception
+            throw e;
+        }
+    }
+
 }
