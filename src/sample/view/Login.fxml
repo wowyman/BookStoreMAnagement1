@@ -4,27 +4,27 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="306.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane prefHeight="303.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoginController">
     <children>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="120.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mật khẩu">
+        <Text layoutX="95.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên đăng nhập" wrappingWidth="143.6171875">
             <font>
-                <Font size="18.0" />
+                <Font name="Times New Roman" size="20.0" />
             </font>
         </Text>
-        <Text layoutX="114.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên đăng nhập">
+        <Text layoutX="102.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mật khẩu">
             <font>
-                <Font size="18.0" />
+                <Font name="Times New Roman" size="20.0" />
             </font>
         </Text>
-        <TextField layoutX="286.0" layoutY="208.0" prefHeight="25.0" prefWidth="137.0" />
-        <TextField layoutX="287.0" layoutY="141.0" prefHeight="25.0" prefWidth="137.0" />
-        <Button layoutX="174.0" layoutY="259.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Đăng nhập" />
-        <Button layoutX="367.0" layoutY="259.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Hủy" />
-        <Text layoutX="151.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý hệ thống người dùng" wrappingWidth="462.7016296386719">
+        <TextField fx:id="user_id" layoutX="260.0" layoutY="116.0" prefHeight="35.0" prefWidth="253.0" promptText="User Name" />
+        <Text layoutX="260.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đăng nhập" wrappingWidth="164.70162963867188">
             <font>
-                <Font name="Elephant" size="24.0" />
+                <Font name="Times New Roman Bold" size="32.0" />
             </font>
         </Text>
+      <PasswordField fx:id="password_id" layoutX="260.0" layoutY="172.0" prefHeight="35.0" prefWidth="253.0" promptText="Password" />
+      <Button layoutX="504.0" layoutY="228.0" mnemonicParsing="false" onAction="#login_action" prefHeight="25.0" prefWidth="105.0" text="Đăng nhập" />
+      <Button layoutX="504.0" layoutY="264.0" mnemonicParsing="false" onAction="#forget_action" prefHeight="25.0" prefWidth="134.0" text="Quên mật khẩu ?" />
     </children>
 </AnchorPane>
