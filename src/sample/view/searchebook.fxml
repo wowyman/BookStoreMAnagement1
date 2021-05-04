@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.shape.*?>
-<?import javafx.embed.swing.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.chart.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="398.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="398.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.searchbook">
     <children>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="19.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên sách" wrappingWidth="130.0">
@@ -19,30 +16,26 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <Button layoutX="30.0" layoutY="175.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
-        <Button layoutX="171.0" layoutY="175.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="In" />
-        <Button layoutX="309.0" layoutY="175.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="64.0" text="Lưu" />
-        <Button layoutX="464.0" layoutY="175.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
-        <Button layoutX="60.0" layoutY="341.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Thoát" />
-        <Button layoutX="272.0" layoutY="341.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Nhập mới" />
+        <Button fx:id="thoat" layoutX="60.0" layoutY="341.0" mnemonicParsing="false" onAction="#thoat_button" prefHeight="25.0" prefWidth="90.0" text="Thoát" />
+        <Button fx:id="nhapmoi" layoutX="272.0" layoutY="341.0" mnemonicParsing="false" onAction="#nhapmoi_button" prefHeight="25.0" prefWidth="90.0" text="Nhập mới" />
         <Text layoutX="189.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tìm kiếm sách" wrappingWidth="345.7016296386719">
             <font>
                 <Font name="Elephant" size="24.0" />
             </font>
         </Text>
         <Text layoutX="19.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin sách" />
-        <TextField layoutX="126.0" layoutY="122.0" prefHeight="25.0" prefWidth="130.0" />
-        <Button layoutX="427.0" layoutY="341.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Chọn" />
-        <TableView layoutX="1.0" layoutY="226.0" prefHeight="111.0" prefWidth="587.0">
+        <TextField fx:id="tensach" layoutX="126.0" layoutY="122.0" onAction="#handle_tensach" prefHeight="25.0" prefWidth="130.0" />
+        <Button fx:id="chon" layoutX="427.0" layoutY="341.0" mnemonicParsing="false" onAction="#nhapmoi_button" prefHeight="25.0" prefWidth="90.0" text="Chọn" />
+        <TableView fx:id="bookTableView" layoutX="1.0" layoutY="226.0" prefHeight="111.0" prefWidth="587.0">
             <columns>
-                <TableColumn prefWidth="75.0" text="Mã sách" />
-                <TableColumn prefWidth="75.0" text="Tên sách" />
-                <TableColumn prefWidth="75.0" text="Thể loại" />
-                <TableColumn prefWidth="75.0" text="Tác giả" />
-                <TableColumn prefWidth="66.0" text="Giá sách" />
-                <TableColumn prefWidth="69.0" text="Vị trí trữ" />
-            <TableColumn prefWidth="79.0" text="Số cho mượn" />
-            <TableColumn prefWidth="86.0" text="Số tồn lại" />
+                <TableColumn fx:id="ms_col" prefWidth="75.0" text="Mã sách" />
+                <TableColumn fx:id="name_col" prefWidth="75.0" text="Tên sách" />
+                <TableColumn fx:id="theloai_col" prefWidth="75.0" text="Thể loại" />
+                <TableColumn fx:id="author_col" prefWidth="75.0" text="Tác giả" />
+                <TableColumn fx:id="price_col" prefWidth="66.0" text="Giá sách" />
+                <TableColumn fx:id="vitritru_col" prefWidth="69.0" text="Vị trí trữ" />
+            <TableColumn fx:id="sochomuon_col" prefWidth="79.0" text="Số cho mượn" />
+            <TableColumn fx:id="sotonlai_col" prefWidth="86.0" text="Số tồn lại" />
             </columns>
         </TableView>
       <Text layoutX="297.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên tác giả" wrappingWidth="130.0">
@@ -50,6 +43,6 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField layoutX="427.0" layoutY="122.0" prefHeight="25.0" prefWidth="130.0" />
+      <TextField fx:id="tentacgia" layoutX="427.0" layoutY="122.0" onAction="#handle_ttg" prefHeight="25.0" prefWidth="130.0" />
     </children>
 </AnchorPane>
