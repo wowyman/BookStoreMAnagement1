@@ -10,10 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import sample.model.Card;
+import sample.Main;
 import sample.model.Customer;
 import sample.model.CustomerDB;
 
@@ -22,6 +21,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Managementcardguest {
+    public static Main main;
+
+    public static void setMain(Main main_) {
+        main = main_;
+    }
     @FXML
     TextField mathe;
     @FXML

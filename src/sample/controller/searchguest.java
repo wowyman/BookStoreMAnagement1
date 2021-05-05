@@ -13,12 +13,19 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import sample.model.Card;
+import sample.Main;
 import sample.model.Customer;
 import sample.model.CustomerDB;
+
 import java.sql.SQLException;
 
 public class searchguest {
+
+    public static Main main;
+
+    public static void setMain(Main main_) {
+        main = main_;
+    }
     @FXML
     TextField tenkhach;
     @FXML

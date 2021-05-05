@@ -8,12 +8,19 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.Main;
 import sample.model.Employee;
 import sample.model.EmployeeDB;
 
 import java.sql.SQLException;
 
 public class searchemployee {
+
+    public static Main main;
+
+    public static void setMain(Main main_) {
+        main = main_;
+    }
     @FXML
     TextField tennhanvien;
     @FXML

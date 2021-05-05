@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="350.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane fx:id="appMother" prefHeight="350.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MenuController">
    <children>
       <BorderPane layoutX="-94.0" layoutY="-26.0" prefHeight="350.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -18,22 +13,22 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Hệ Thống">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Quản trị người dùng" />
-                        <MenuItem mnemonicParsing="false" text="Logout" />
-                        <MenuItem mnemonicParsing="false" text="Exit" />
+                    <MenuItem mnemonicParsing="false" onAction="#user_controller" text="Quản trị người dùng" />
+                        <MenuItem mnemonicParsing="false" onAction="#LoginController" text="Logout" />
+                        <MenuItem mnemonicParsing="false" onAction="#close" text="Exit" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Quản lý danh mục">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Quản lý nhà cung cấp" />
-                        <MenuItem mnemonicParsing="false" text="Quản lý nhân viên" />
-                        <MenuItem mnemonicParsing="false" text="Quản lý khách" />
-                        <MenuItem mnemonicParsing="false" text="Quản lý sách" />
+                    <MenuItem mnemonicParsing="false" onAction="#Book_supplier_controller" text="Quản lý nhà cung cấp" />
+                        <MenuItem mnemonicParsing="false" onAction="#Employee_controller" text="Quản lý nhân viên" />
+                        <MenuItem mnemonicParsing="false" onAction="#Guest_information_Controller" text="Quản lý khách" />
+                        <MenuItem mnemonicParsing="false" onAction="#Book_information_controller_action" text="Quản lý sách" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Quản lý nhập xuất">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Phiếu nhập" />
+                    <MenuItem mnemonicParsing="false" onAction="#phieunhapController" text="Phiếu nhập" />
                         <MenuItem mnemonicParsing="false" text="Phiếu xuất" />
                   </items>
                 </Menu>
@@ -45,14 +40,14 @@
                   </Menu>
                   <Menu mnemonicParsing="false" text="Quản lý thẻ">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="Quản lý thẻ khách" />
+                        <MenuItem mnemonicParsing="false" onAction="#Managementcardguest" text="Quản lý thẻ khách" />
                         <MenuItem mnemonicParsing="false" text="Quản lý thẻ muộn" />
                      </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Giúp đỡ">
                      <items>
                         <MenuItem mnemonicParsing="false" text="Cách sử dụng" />
-                        <MenuItem mnemonicParsing="false" text="Thông tin về nhóm" />
+                        <MenuItem mnemonicParsing="false" onAction="#ttnhom" text="Thông tin về nhóm" />
                      </items>
                   </Menu>
               </menus>
@@ -64,9 +59,9 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="354.0" />
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="346.0">
                      <children>
-                        <ImageView fitHeight="318.0" fitWidth="700.0" layoutX="-4.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="imageView" fitHeight="318.0" fitWidth="700.0" layoutX="-4.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../Downloads/library-with-books-shelves-laptop-table_107791-1758.jpg" />
+                              <Image url="@../library-with-books-shelves-laptop-table_107791-1758.jpg" />
                            </image>
                         </ImageView>
                         <Text fill="RED" layoutX="141.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="    Hệ thống quản lý thư viện sách" wrappingWidth="537.0">

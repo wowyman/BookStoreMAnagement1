@@ -12,12 +12,19 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import sample.Main;
 import sample.model.Book;
 import sample.model.BookDB;
 
 import java.sql.SQLException;
 
 public class searchbook {
+
+    public static Main main;
+
+    public static void setMain(Main main_) {
+        main = main_;
+    }
     @FXML
     TextField tensach;
     @FXML

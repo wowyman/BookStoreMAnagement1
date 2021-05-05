@@ -1,28 +1,31 @@
 package sample.controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import sample.Main;
 import sample.model.LoginDB;
 
 import java.io.File;
 import java.io.FileWriter;
-import java.util.Scanner;
 
 public class LoginController {
 
-    String nam;
+    String name;
     String pass;
     public  static  int val;
     public  static Main ob;
+
+    public MenuController menuController;
     public  static  void setMain(Main b){
         ob=b;
     }
+
+
 
     @FXML
 
@@ -49,7 +52,6 @@ public class LoginController {
 
     @FXML
     void login_action() throws Exception{
-
         String name=user_id.getText();
         String  pass=password_id.getText();
         int t= LoginDB.pass_match(name,pass);
@@ -58,12 +60,23 @@ public class LoginController {
         if(t==2 || t==1) {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/Menu.fxml"));
-            System.out.println("---------------"+t+"---------------");
+            Parent root = (Parent) loader.load();
+
+//            Stage stage = new Stage();
+//
+//            stage.setTitle("Hệ thống quản lý nhà sách");
+//            stage.setScene(new Scene(root));
+//            stage.show();
+
+            ob.primaryStage.close();
+            ob.primaryStage.setTitle("Hệ thống quản lý nhà sách");
+            ob.primaryStage.setScene(new Scene(root));
+            ob.primaryStage.show();
+
         }
 
 
     }
-
 
 
 }
