@@ -21,46 +21,46 @@ public class Employee_controller {
     }
 
     @FXML
-    private ComboBox ma_nv = new ComboBox();
+    private final ComboBox ma_nv = new ComboBox();
     @FXML
-    private TextField dien_thoai = new TextField();
+    private final TextField dien_thoai = new TextField();
     @FXML
-    private TextField ten_nv = new TextField();
+    private final TextField ten_nv = new TextField();
     @FXML
-    private TextField dia_chi = new TextField();
+    private final TextField dia_chi = new TextField();
     @FXML
-    private ChoiceBox chuc_vu = new ChoiceBox();
+    private final ChoiceBox chuc_vu = new ChoiceBox();
     @FXML
-    private DatePicker ngay_sinh = new DatePicker();
+    private final DatePicker ngay_sinh = new DatePicker();
     @FXML
-    private TextField luong = new TextField();
+    private final TextField luong = new TextField();
     @FXML
-    private ChoiceBox noi_lam_viec = new ChoiceBox();
+    private final ChoiceBox noi_lam_viec = new ChoiceBox();
     @FXML
-    private CheckBox nam = new CheckBox();
+    private final CheckBox nam = new CheckBox();
     @FXML
-    private CheckBox nu = new CheckBox();
+    private final CheckBox nu = new CheckBox();
 
 
 
     @FXML
-    private TableView<Employee> table = new TableView<Employee>();
+    private final TableView<Employee> table = new TableView<Employee>();
     @FXML
-    private TableColumn<Employee, String> manv= new TableColumn<>();
+    private final TableColumn<Employee, String> manv= new TableColumn<>();
     @FXML
-    private TableColumn<Employee, String> tennv = new TableColumn<>();
+    private final TableColumn<Employee, String> tennv = new TableColumn<>();
     @FXML
-    private TableColumn<Employee, String> dienthoai = new TableColumn<>();
+    private final TableColumn<Employee, String> dienthoai = new TableColumn<>();
     @FXML
-    private TableColumn<Employee, String> chucvu = new TableColumn<>();
+    private final TableColumn<Employee, String> chucvu = new TableColumn<>();
     @FXML
-    private TableColumn<Employee, String> ngaysinh = new TableColumn<>();
+    private final TableColumn<Employee, String> ngaysinh = new TableColumn<>();
     @FXML
-    private TableColumn<Employee, String> diachi = new TableColumn<>();
+    private final TableColumn<Employee, String> diachi = new TableColumn<>();
     @FXML
-    private TableColumn<Employee, Integer> Luong = new TableColumn<>();
+    private final TableColumn<Employee, Integer> Luong = new TableColumn<>();
     @FXML
-    private TableColumn<Employee, String> noilamviec = new TableColumn<>();
+    private final TableColumn<Employee, String> noilamviec = new TableColumn<>();
 
 
 
@@ -209,7 +209,7 @@ public class Employee_controller {
         luong.setText("");
     }
     @FXML
-    private Button xong = new Button();
+    private final Button xong = new Button();
     @FXML
     public void close() {
         Stage stage = (Stage) xong.getScene().getWindow();

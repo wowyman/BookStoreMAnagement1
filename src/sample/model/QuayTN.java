@@ -4,8 +4,8 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class QuayTN {
-    private StringProperty maQTN;
-    private StringProperty tenQTN;
+    private final StringProperty maQTN;
+    private final StringProperty tenQTN;
 
     //Constructor
     public QuayTN() {

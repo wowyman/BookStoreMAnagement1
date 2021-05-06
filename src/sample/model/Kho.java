@@ -4,9 +4,9 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Kho {
-    private StringProperty maKho;
-    private StringProperty tenKho;
-    private StringProperty theLoai;
+    private final StringProperty maKho;
+    private final StringProperty tenKho;
+    private final StringProperty theLoai;
     //Constructor
     public Kho() {
         maKho = new SimpleStringProperty();

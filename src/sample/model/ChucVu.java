@@ -4,8 +4,8 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class ChucVu {
-    private StringProperty MSCV;
-    private StringProperty tenCV;
+    private final StringProperty MSCV;
+    private final StringProperty tenCV;
 
     //Constructor
     public ChucVu() {

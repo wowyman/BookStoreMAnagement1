@@ -4,56 +4,108 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="513.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="513.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="316.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày nhập" wrappingWidth="116.13671875">
+        <Text layoutX="343.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày nhập" wrappingWidth="116.13671875">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="15.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhà cung cấp">
+        <Text layoutX="42.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhà cung cấp">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="14.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã phiếu nhập">
+        <Text layoutX="41.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã phiếu nhập">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="316.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhân viên">
+        <Text layoutX="343.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhân viên">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <TextField layoutX="159.0" layoutY="126.0" prefHeight="25.0" prefWidth="130.0" text="comming soon=))" />
-        <Button layoutX="22.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
-        <Button layoutX="316.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="In" />
-        <Button layoutX="144.0" layoutY="218.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
-        <Button layoutX="497.0" layoutY="474.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Chấp nhận" />
-        <Text layoutX="192.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý phiếu nhập" wrappingWidth="293.7016296386719">
+        <TextField layoutX="186.0" layoutY="97.0" prefHeight="25.0" prefWidth="130.0" />
+        <Button layoutX="115.0" layoutY="190.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
+        <Button layoutX="456.0" layoutY="190.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="In" />
+        <Button layoutX="271.0" layoutY="190.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
+        <Button layoutX="510.0" layoutY="481.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Chấp nhận" />
+        <Text layoutX="215.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý phiếu nhập" wrappingWidth="293.7016296386719">
             <font>
-                <Font name="Elephant" size="24.0" />
+                <Font name="Times New Roman" size="24.0" />
             </font>
         </Text>
-        <Text layoutX="4.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin hàng nhập" />
-      <Text layoutX="85.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền nhập" />
-      <Text layoutX="83.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền bằng chữ" />
-      <TextField layoutX="189.0" layoutY="401.0" prefHeight="25.0" prefWidth="396.0" />
-      <TextField layoutX="192.0" layoutY="438.0" prefHeight="25.0" prefWidth="396.0" />
-      <ComboBox layoutX="159.0" layoutY="171.0" prefHeight="25.0" prefWidth="130.0" />
-      <ComboBox layoutX="432.0" layoutY="171.0" prefHeight="25.0" prefWidth="130.0" />
-      <TableView layoutY="286.0" prefHeight="102.0" prefWidth="614.0">
-        <columns>
-          <TableColumn prefWidth="84.0" text="Mã sách" />
-          <TableColumn prefWidth="107.0" text="Tác giả" />
-            <TableColumn prefWidth="113.0" text="Tên sách" />
-            <TableColumn prefWidth="102.0" text="Thể loại" />
-            <TableColumn prefWidth="100.0" text="Giá" />
-            <TableColumn prefWidth="107.0" text="Số lượng" />
-        </columns>
-      </TableView>
-      <DatePicker layoutX="432.0" layoutY="125.0" prefHeight="25.0" prefWidth="130.0" />
+        <Text layoutX="14.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin hàng nhập" />
+      <Text layoutX="98.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền nhập" />
+      <Text layoutX="86.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền bằng chữ" />
+      <TextField layoutX="202.0" layoutY="408.0" prefHeight="25.0" prefWidth="423.0" />
+      <TextField layoutX="202.0" layoutY="445.0" prefHeight="25.0" prefWidth="423.0" />
+      <ComboBox layoutX="186.0" layoutY="142.0" prefHeight="25.0" prefWidth="130.0" />
+      <ComboBox layoutX="459.0" layoutY="142.0" prefHeight="25.0" prefWidth="156.0" />
+      <DatePicker layoutX="459.0" layoutY="96.0" prefHeight="25.0" prefWidth="156.0" />
+      <ComboBox layoutX="8.0" layoutY="271.0" prefHeight="25.0" prefWidth="90.0" promptText="Mã sách" />
+      <TextField layoutX="106.0" layoutY="271.0" prefHeight="25.0" prefWidth="81.0" promptText="Tác giả" />
+      <TextField layoutX="193.0" layoutY="271.0" prefHeight="25.0" prefWidth="81.0" promptText="Tên sách" />
+      <TextField layoutX="281.0" layoutY="271.0" prefHeight="25.0" prefWidth="81.0" promptText="Thể loại" />
+      <TextField layoutX="369.0" layoutY="271.0" prefHeight="25.0" prefWidth="81.0" promptText="Giá " />
+      <TextField layoutX="456.0" layoutY="271.0" prefHeight="25.0" prefWidth="81.0" promptText="Số lượng" />
+      <Text layoutX="8.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã sách">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="105.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tác giả">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="200.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên sách">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="285.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thể loại">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="374.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá" wrappingWidth="34.8662109375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="457.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng" wrappingWidth="80.53125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField layoutX="546.0" layoutY="271.0" prefHeight="25.0" prefWidth="81.0" promptText="Thành tiền" />
+      <Text layoutX="550.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thành tiền" wrappingWidth="96.53125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ComboBox layoutX="7.0" layoutY="302.0" prefHeight="25.0" prefWidth="90.0" promptText="Mã sách" />
+      <TextField layoutX="105.0" layoutY="302.0" prefHeight="25.0" prefWidth="81.0" promptText="Tác giả" />
+      <TextField layoutX="192.0" layoutY="302.0" prefHeight="25.0" prefWidth="81.0" promptText="Tên sách" />
+      <TextField layoutX="280.0" layoutY="302.0" prefHeight="25.0" prefWidth="81.0" promptText="Thể loại" />
+      <TextField layoutX="368.0" layoutY="302.0" prefHeight="25.0" prefWidth="81.0" promptText="Giá " />
+      <TextField layoutX="455.0" layoutY="302.0" prefHeight="25.0" prefWidth="81.0" promptText="Số lượng" />
+      <TextField layoutX="545.0" layoutY="302.0" prefHeight="25.0" prefWidth="81.0" promptText="Thành tiền" />
+      <ComboBox layoutX="8.0" layoutY="335.0" prefHeight="25.0" prefWidth="90.0" promptText="Mã sách" />
+      <TextField layoutX="106.0" layoutY="335.0" prefHeight="25.0" prefWidth="81.0" promptText="Tác giả" />
+      <TextField layoutX="193.0" layoutY="335.0" prefHeight="25.0" prefWidth="81.0" promptText="Tên sách" />
+      <TextField layoutX="281.0" layoutY="335.0" prefHeight="25.0" prefWidth="81.0" promptText="Thể loại" />
+      <TextField layoutX="369.0" layoutY="335.0" prefHeight="25.0" prefWidth="81.0" promptText="Giá " />
+      <TextField layoutX="456.0" layoutY="335.0" prefHeight="25.0" prefWidth="81.0" promptText="Số lượng" />
+      <TextField layoutX="546.0" layoutY="335.0" prefHeight="25.0" prefWidth="81.0" promptText="Thành tiền" />
+      <ComboBox layoutX="7.0" layoutY="366.0" prefHeight="25.0" prefWidth="90.0" promptText="Mã sách" />
+      <TextField layoutX="105.0" layoutY="366.0" prefHeight="25.0" prefWidth="81.0" promptText="Tác giả" />
+      <TextField layoutX="192.0" layoutY="366.0" prefHeight="25.0" prefWidth="81.0" promptText="Tên sách" />
+      <TextField layoutX="280.0" layoutY="366.0" prefHeight="25.0" prefWidth="81.0" promptText="Thể loại" />
+      <TextField layoutX="368.0" layoutY="366.0" prefHeight="25.0" prefWidth="81.0" promptText="Giá " />
+      <TextField layoutX="455.0" layoutY="366.0" prefHeight="25.0" prefWidth="81.0" promptText="Số lượng" />
+      <TextField layoutX="545.0" layoutY="366.0" prefHeight="25.0" prefWidth="81.0" promptText="Thành tiền" />
     </children>
 </AnchorPane>

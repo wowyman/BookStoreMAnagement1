@@ -4,8 +4,8 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class TheKho {
-    private StringProperty maThe;
-    private StringProperty ngayPhatSinh;
+    private final StringProperty maThe;
+    private final StringProperty ngayPhatSinh;
     //Constructor
     public TheKho()  {
         maThe = new SimpleStringProperty();

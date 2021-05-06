@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -11,6 +12,8 @@ import sample.controller.Guest_information_Controller;
 import sample.controller.LoginController;
 import sample.controller.MenuController;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 public class Main extends Application {
@@ -31,44 +34,27 @@ public class Main extends Application {
 
         //Optional: Set a title for primary stage
         this.primaryStage.setTitle("Hệ thống quản lý nhà sách");
-        loginController.setMain(this);
-        menu.setMain(this);
+        LoginController.setMain(this);
+        MenuController.setMain(this);
         //2) Initialize RootLayout
         initRootLayout();
 
 
     }
 
-//    public void initRootLayout() {
-//        try {
-//
-//            root = FXMLLoader.load(getClass().getResource("view/Menu.fxml"));
-//
-//            //Second, show the scene containing the root layout.
-//            Scene scene = new Scene(root,700,350); //We are sending rootLayout to the Scene.
-//
-//            Image image = new Image("file:\\C:\\Users\\pc\\IdeaProjects\\BookStoreMAnagement1\\src\\sample\\library-with-books-shelves-laptop-table_107791-1758.jpg");
-//            imageView = new ImageView(image);
-//            primaryStage.setScene(scene); //Set the scene in primary stage.
-//
-//            //Give the controller access to the main.
-//            menu.setMain(this);
-//
-//            //Third, show the primary stage
-//            primaryStage.show(); //Display the primary stage
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+
 
     public void initRootLayout() {
         try {
 
             root = FXMLLoader.load(getClass().getResource("view/Login.fxml"));
-
+            //MenuController.setImageView();
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
             //Second, show the scene containing the root layout.
             Scene scene = new Scene(root,668,303); //We are sending rootLayout to the Scene.
             primaryStage.setScene(scene);
+            primaryStage.getIcons().add(image);
             LoginController.setMain(this);
             primaryStage.show(); //Display the primary stage
         } catch (IOException e) {
@@ -79,5 +65,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
     }
 }

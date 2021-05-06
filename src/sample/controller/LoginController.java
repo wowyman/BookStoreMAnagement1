@@ -7,10 +7,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import sample.Main;
 import sample.model.LoginDB;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 
 public class LoginController {
@@ -36,7 +38,6 @@ public class LoginController {
 
     @FXML
     void forget_action() throws  Exception{
-        String str = "imran";
         File newTextFile = new File(System.getProperty("user.dir") +"\\src\\sample\\controller\\output.txt");
 
         FileWriter fw = new FileWriter(newTextFile);
@@ -60,16 +61,17 @@ public class LoginController {
         if(t==2 || t==1) {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/Menu.fxml"));
-            Parent root = (Parent) loader.load();
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
 
-//            Stage stage = new Stage();
-//
-//            stage.setTitle("Hệ thống quản lý nhà sách");
-//            stage.setScene(new Scene(root));
-//            stage.show();
+
+
+            Parent root = loader.load();
+
 
             ob.primaryStage.close();
             ob.primaryStage.setTitle("Hệ thống quản lý nhà sách");
+            ob.primaryStage.getIcons().add(image);
             ob.primaryStage.setScene(new Scene(root));
             ob.primaryStage.show();
 

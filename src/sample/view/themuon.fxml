@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="287.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="186.0" layoutY="56.0" text="Quản lý thẻ mượn">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="248.0" layoutY="144.0" prefHeight="17.0" prefWidth="113.0" text="Comming soon" />
+   </children>
+</AnchorPane>

@@ -4,11 +4,11 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Author {
-    private StringProperty authorNumber;
-    private StringProperty name;
-    private StringProperty email;
-    private StringProperty phoneNumber;
-    private StringProperty queQuan;
+    private final StringProperty authorNumber;
+    private final StringProperty name;
+    private final StringProperty email;
+    private final StringProperty phoneNumber;
+    private final StringProperty queQuan;
 
     //Constructor
     public Author() {

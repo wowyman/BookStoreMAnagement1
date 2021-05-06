@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="217.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="217.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="400.0" fitWidth="209.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../1.png" />
          </image>
       </ImageView>
-      <Text layoutX="218.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lê Thiên Lực &amp; Mai Công Danh &amp; Đỗ Đại Dương &amp; Lê Mạnh Cường" wrappingWidth="368.794921875" />
-      <Text layoutX="218.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phiên bản :1.0" wrappingWidth="80.150390625" />
+      <Text layoutX="214.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phiên bản :1.0" wrappingWidth="80.150390625" />
+      <TextArea layoutX="214.0" layoutY="25.0" prefHeight="186.0" prefWidth="458.0" text="- Phần mềm quản lý thư viện sách&#10;- Đối tượng sử dụng : nhà sách, thư viện, trung tâm giao dịch sách...&#10;- Các chức năng được mô tả ở file hướng dẫn sử dụng được tải kèm&#10;  cùng với phần mềm.&#10;- Các thắc mắc hoặc yêu cầu hỗ trợ liên hệ :&#10;   + daiduongz@gmail.com, thienluccaothu@gmail.com, cuongcto@gmail.com&#10;   +SDT: 0987654321&#10; Các thành viên nhóm : Đỗ Đại Dương, Lê Mạnh Cường&#10;                                      Lê Thiên Lực, Mai Công Danh&#10;" />
    </children>
 </AnchorPane>

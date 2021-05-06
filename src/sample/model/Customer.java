@@ -8,14 +8,14 @@ import javafx.beans.property.StringProperty;
 import static sample.model.LoaiThe.*;
 
 public class Customer {
-    private StringProperty name;
-    private StringProperty cmnd;
-    private StringProperty phoneNumber;
-    private StringProperty address;
-    private IntegerProperty age;
-    private StringProperty MSPM;
-    private Card thedoc;
-    private  Card themuon;
+    private final StringProperty name;
+    private final StringProperty cmnd;
+    private final StringProperty phoneNumber;
+    private final StringProperty address;
+    private final IntegerProperty age;
+    private final StringProperty MSPM;
+    private final Card thedoc;
+    private final Card themuon;
 
 
     //Constructor

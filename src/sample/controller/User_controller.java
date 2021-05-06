@@ -18,17 +18,17 @@ public class User_controller {
     }
 
     @FXML
-    private ComboBox quyen_su_dung = new ComboBox();
+    private final ComboBox quyen_su_dung = new ComboBox();
     @FXML
-    private ComboBox chuc_vu = new ComboBox();
+    private final ComboBox chuc_vu = new ComboBox();
     @FXML
-    private ComboBox ten_nguoi_dung = new ComboBox();
+    private final ComboBox ten_nguoi_dung = new ComboBox();
     @FXML
-    private TextField ten_dang_nhap = new TextField();
+    private final TextField ten_dang_nhap = new TextField();
     @FXML
-    private PasswordField mat_khau = new PasswordField();
+    private final PasswordField mat_khau = new PasswordField();
     @FXML
-    private PasswordField xac_nhan_mat_khau = new PasswordField();
+    private final PasswordField xac_nhan_mat_khau = new PasswordField();
 
 
     @FXML
@@ -136,7 +136,7 @@ public class User_controller {
     }
 
     @FXML
-    private Button xong = new Button();
+    private final Button xong = new Button();
 
     @FXML
     public void close() {

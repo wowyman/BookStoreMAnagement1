@@ -22,34 +22,34 @@ public class Book_supplier_controller {
     }
 
     @FXML
-    private ComboBox ma_ncc = new ComboBox();
+    private final ComboBox ma_ncc = new ComboBox();
     @FXML
-    private TextField dien_thoai = new TextField();
+    private final TextField dien_thoai = new TextField();
     @FXML
-    private TextField ten_ncc = new TextField();
+    private final TextField ten_ncc = new TextField();
     @FXML
-    private TextField email = new TextField();
+    private final TextField email = new TextField();
     @FXML
-    private TextField dia_chi = new TextField();
+    private final TextField dia_chi = new TextField();
     @FXML
-    private TextField fax = new TextField();
+    private final TextField fax = new TextField();
 
 
 
     @FXML
-    private TableView<NCC> table = new TableView<NCC>();
+    private final TableView<NCC> table = new TableView<NCC>();
     @FXML
-    private TableColumn<NCC, String> mancc= new TableColumn<>();
+    private final TableColumn<NCC, String> mancc= new TableColumn<>();
     @FXML
-    private TableColumn<NCC, String> tenncc = new TableColumn<>();
+    private final TableColumn<NCC, String> tenncc = new TableColumn<>();
     @FXML
-    private TableColumn<NCC, String> dienthoai = new TableColumn<>();
+    private final TableColumn<NCC, String> dienthoai = new TableColumn<>();
     @FXML
-    private TableColumn<NCC, String> Email = new TableColumn<>();
+    private final TableColumn<NCC, String> Email = new TableColumn<>();
     @FXML
-    private TableColumn<NCC, String> Fax = new TableColumn<>();
+    private final TableColumn<NCC, String> Fax = new TableColumn<>();
     @FXML
-    private TableColumn<NCC, String> diachi = new TableColumn<>();
+    private final TableColumn<NCC, String> diachi = new TableColumn<>();
 
 
 
@@ -157,7 +157,7 @@ public class Book_supplier_controller {
         fax.setText("");
     }
     @FXML
-    private Button xong = new Button();
+    private final Button xong = new Button();
     @FXML
     public void close() {
         Stage stage = (Stage) xong.getScene().getWindow();

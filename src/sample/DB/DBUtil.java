@@ -7,9 +7,9 @@ import javax.sql.rowset.RowSetProvider;
 import java.sql.*;
 
 public class DBUtil {
-    private static String DB_URL = "jdbc:mysql://localhost:3306/quanlythuvien";
-    private static String USER_NAME = "root";
-    private static String PASSWORD = "";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/quanlythuvien";
+    private static final String USER_NAME = "root";
+    private static final String PASSWORD = "";
     private static Connection connection = null;
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {

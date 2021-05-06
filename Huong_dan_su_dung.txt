@@ -1,0 +1,25 @@
+Phần mềm quản lí thư viện phiên bản 1.0
+Bản quyền thuộc về @teamDDLCk64uetclc4.
+- Phần mềm quản lý thư viện giúp nhà sách quản lí và theo dõi hoạt động kinh doanh sách hiệu quả 
+  và chính xác hơn.
+
+Hướng dẫn sử dụng :
+ - Đăng nhập : khi khởi động hệ thống sẽ yêu cầu đăng nhập. Tài khoản mặc định là :
+   Username : user    Password : 123
+   	
+   Chức năng tạo tài khoản và quên mật khẩu sẽ sớm được cập nhật...
+ - Thanh toolbar "Hệ thống" : 
+   +    Quản trị người dùng : sử dụng để tạo người dùng, chỉ có 2 quyền truy cập
+        là nhân viên hoặc admin. Người sử dụng lựa chọn chức vụ của mình hoặc tạo 
+        chức vụ mới nếu có thêm. Các chỉ mục khác nhập bình thường và ấn "Thêm ","Sửa","Xóa"
+	để thực hiện các thao tác tương ứng.
+   +	Logout: đăng xuất tài khoản của ng dùng,trở lại màn hình đăng nhập.
+   +	Exit : thoát phần mềm
+ - Thanh "quản lí danh mục" :
+   + 	Quản lí nhà cung cấp : nhập các thông tin tương ứng, nút "Tìm kiếm" sử dụng để tìm kiếm 
+	và hiển thị thông tin về nhà cung cấp sách.Thông tin được hiển thị ở mục bên dưới.
+   + 	Các mục còn lại tương tự.
+ - Các thanh còn lại sử dụng tương tự. Mục quản lí thẻ mượn sẽ được cập nhật sau.
+ - Thông tin về nhóm thiết kế xem ở mục "More..."->"Thông tin cơ bản".
+ ------------------ Cám ơn đã sử dụng phần mềm của chúng tôi!--------------------------
+	

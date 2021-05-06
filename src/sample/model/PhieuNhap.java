@@ -6,11 +6,11 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class PhieuNhap {
-    private StringProperty MSPN;
-    private StringProperty ngayNhap;
-    private IntegerProperty tongGiaTri;
-    private NCC ncc;
-    private Employee e;
+    private final StringProperty MSPN;
+    private final StringProperty ngayNhap;
+    private final IntegerProperty tongGiaTri;
+    private final NCC ncc;
+    private final Employee e;
 
     //Constructor
     public PhieuNhap() {

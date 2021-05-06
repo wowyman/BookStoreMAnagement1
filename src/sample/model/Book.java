@@ -15,7 +15,7 @@ public class Book {
     private final IntegerProperty tap;
     private final IntegerProperty price;
     private final IntegerProperty soLuong;
-    private Kho kho;
+    private final Kho kho;
     private IntegerProperty thanhtien;
 
     //Constructor

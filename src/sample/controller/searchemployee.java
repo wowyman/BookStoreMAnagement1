@@ -27,7 +27,7 @@ public class searchemployee {
     TextField noilamviec;
 
     @FXML
-    private TableView<Employee> table = new TableView<Employee>();
+    private final TableView<Employee> table = new TableView<Employee>();
     @FXML
     TableColumn<Employee, String> msnv_col;
     @FXML
@@ -75,7 +75,7 @@ public class searchemployee {
     }
 
     @FXML
-    private Button xong = new Button();
+    private final Button xong = new Button();
     @FXML
     public void close() {
         Stage stage = (Stage) xong.getScene().getWindow();

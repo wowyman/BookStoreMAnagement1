@@ -4,9 +4,9 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class PhieuGiaoCa {
-    private StringProperty MSPGC;
-    private StringProperty ngay;
-    private StringProperty ca;
+    private final StringProperty MSPGC;
+    private final StringProperty ngay;
+    private final StringProperty ca;
     //Constructor
     public PhieuGiaoCa() {
         MSPGC = new SimpleStringProperty();

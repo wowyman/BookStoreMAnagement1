@@ -5,11 +5,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import sample.Main;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 public class MenuController {
@@ -35,9 +38,14 @@ public class MenuController {
     private AnchorPane appMother;
 
     @FXML
-    ImageView imageView;
+    public static ImageView imageView;
     public MenuController menu;
-
+//    public static void setImageView() throws FileNotFoundException {
+//        FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\anhnen.jpg"));
+//        Image image = new Image(inputstream);
+//        imageView = new ImageView(image);
+//
+//    }
     @FXML
     void LoginController(ActionEvent event) {
         if(LoginController.val==1)
@@ -48,10 +56,15 @@ public class MenuController {
             //First, load EmployeeView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/Login.fxml"));
-            Parent root = (Parent) loader.load();
+
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+
+            Parent root = loader.load();
             Stage stage = new Stage();
             LoginController.setMain(ob);
             stage.setTitle("Login");
+            stage.getIcons().add(image);
             stage.setScene(new Scene(root));
             stage.show();
             ob.primaryStage.close();
@@ -68,9 +81,11 @@ public class MenuController {
             //First, load EmployeeView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/User.fxml"));
-            Parent root = (Parent) loader.load();
+            Parent root = loader.load();
             Stage stage = new Stage();
-
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
             stage.setTitle("User");
             stage.setScene(new Scene(root));
             stage.show();
@@ -87,9 +102,11 @@ public class MenuController {
             //First, load EmployeeView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/receipt.fxml"));
-            Parent root = (Parent) loader.load();
+            Parent root = loader.load();
             Stage stage = new Stage();
-
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
             stage.setTitle("Phiếu nhập");
             stage.setScene(new Scene(root));
             stage.show();
@@ -107,9 +124,11 @@ public class MenuController {
             //First, load EmployeeView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/Bookinformation.fxml"));
-            Parent root = (Parent) loader.load();
+            Parent root = loader.load();
             Stage stage = new Stage();
-
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
             stage.setTitle("Thông tin sách");
             stage.setScene(new Scene(root));
             stage.show();
@@ -128,9 +147,11 @@ public class MenuController {
             //First, load EmployeeView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/Booksupplier.fxml"));
-            Parent root = (Parent) loader.load();
+            Parent root = loader.load();
             Stage stage = new Stage();
-
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
             stage.setTitle("Nhà cung cấp");
             stage.setScene(new Scene(root));
             stage.show();
@@ -149,9 +170,11 @@ public class MenuController {
             //First, load EmployeeView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/Employee.fxml"));
-            Parent root = (Parent) loader.load();
+            Parent root = loader.load();
             Stage stage = new Stage();
-
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
             stage.setTitle("Nhân viên");
             stage.setScene(new Scene(root));
             stage.show();
@@ -169,9 +192,11 @@ public class MenuController {
             //First, load EmployeeView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/Guest_information.fxml"));
-            Parent root = (Parent) loader.load();
+            Parent root = loader.load();
             Stage stage = new Stage();
-
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
             stage.setTitle("Thông tin khách");
             stage.setScene(new Scene(root));
             stage.show();
@@ -192,9 +217,11 @@ public class MenuController {
             //First, load EmployeeView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/managementcardguests.fxml"));
-            Parent root = (Parent) loader.load();
+            Parent root = loader.load();
             Stage stage = new Stage();
-
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
             stage.setTitle("Quản lý thẻ khách");
             stage.setScene(new Scene(root));
             stage.show();
@@ -210,9 +237,11 @@ public class MenuController {
             //First, load EmployeeView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/introduceprogram.fxml"));
-            Parent root = (Parent) loader.load();
+            Parent root = loader.load();
             Stage stage = new Stage();
-
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
             stage.setTitle("Thông tin nhóm");
             stage.setScene(new Scene(root));
             stage.show();
@@ -230,9 +259,11 @@ public class MenuController {
             //First, load EmployeeView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/searchebook.fxml"));
-            Parent root = (Parent) loader.load();
+            Parent root = loader.load();
             Stage stage = new Stage();
-
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
             stage.setTitle("User");
             stage.setScene(new Scene(root));
             stage.show();
@@ -251,9 +282,11 @@ public class MenuController {
             //First, load EmployeeView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/searchemployee.fxml"));
-            Parent root = (Parent) loader.load();
+            Parent root = loader.load();
             Stage stage = new Stage();
-
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
             stage.setTitle("User");
             stage.setScene(new Scene(root));
             stage.show();
@@ -272,9 +305,11 @@ public class MenuController {
             //First, load EmployeeView from EmployeeView.fxml
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/searchguestinformation.fxml"));
-            Parent root = (Parent) loader.load();
+            Parent root = loader.load();
             Stage stage = new Stage();
-
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
             stage.setTitle("User");
             stage.setScene(new Scene(root));
             stage.show();
@@ -284,6 +319,102 @@ public class MenuController {
             e.printStackTrace();
         }
     }
+    @FXML
+    void phieuxuat(ActionEvent event) {
+        if(LoginController.val==1)
+            return;
+        try {
+            //First, load EmployeeView from EmployeeView.fxml
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/bill.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
+            stage.setTitle("Thông tin khách");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void phieugiaoca(ActionEvent event) {
+        if(LoginController.val==1)
+            return;
+        try {
+            //First, load EmployeeView from EmployeeView.fxml
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/phieugiaoca.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
+            stage.setTitle("Thông tin khách");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void phieumuon(ActionEvent event) {
+        if(LoginController.val==1)
+            return;
+        try {
+            //First, load EmployeeView from EmployeeView.fxml
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/loan.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
+            stage.setTitle("Thông tin khách");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void themuon(ActionEvent event) {
+        if(LoginController.val==1)
+            return;
+        try {
+            //First, load EmployeeView from EmployeeView.fxml
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/themuon.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            FileInputStream inputstream = new FileInputStream(new File(System.getProperty("user.dir") + "\\src\\sample\\icon1.jpg"));
+            Image image = new Image(inputstream);
+            stage.getIcons().add(image);
+            stage.setTitle("Thông tin khách");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+
     @FXML
     void close() {
         ob.primaryStage.close();

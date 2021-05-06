@@ -19,38 +19,38 @@ public class Book_information_controller {
     }
 
     @FXML
-    private ComboBox ma_sach = new ComboBox();
+    private final ComboBox ma_sach = new ComboBox();
     @FXML
-    private TextField ten_sach = new TextField();
+    private final TextField ten_sach = new TextField();
     @FXML
-    private TextField the_loai = new TextField();
+    private final TextField the_loai = new TextField();
     @FXML
-    private TextField tac_gia = new TextField();
+    private final TextField tac_gia = new TextField();
     @FXML
-    private ChoiceBox vi_tri_tru = new ChoiceBox();
+    private final ChoiceBox vi_tri_tru = new ChoiceBox();
     @FXML
-    private TextField gia = new TextField();
+    private final TextField gia = new TextField();
     @FXML
-    private TextField so_luong = new TextField();
+    private final TextField so_luong = new TextField();
 
 
 
     @FXML
-    private TableView<Book> table = new TableView<Book>();
+    private final TableView<Book> table = new TableView<Book>();
     @FXML
-    private TableColumn<Book, String> masach= new TableColumn<>();
+    private final TableColumn<Book, String> masach= new TableColumn<>();
     @FXML
-    private TableColumn<Book, String> tensach = new TableColumn<>();
+    private final TableColumn<Book, String> tensach = new TableColumn<>();
     @FXML
-    private TableColumn<Book, String> theloai = new TableColumn<>();
+    private final TableColumn<Book, String> theloai = new TableColumn<>();
     @FXML
-    private TableColumn<Book, String> tacgia = new TableColumn<>();
+    private final TableColumn<Book, String> tacgia = new TableColumn<>();
     @FXML
-    private TableColumn<Book, String> giasach = new TableColumn<>();
+    private final TableColumn<Book, String> giasach = new TableColumn<>();
     @FXML
-    private TableColumn<Book, String> vitritru = new TableColumn<>();
+    private final TableColumn<Book, String> vitritru = new TableColumn<>();
     @FXML
-    private TableColumn<Book, Integer> soluong = new TableColumn<>();
+    private final TableColumn<Book, Integer> soluong = new TableColumn<>();
 
 
 
@@ -174,7 +174,7 @@ public class Book_information_controller {
         gia.setText("");
     }
     @FXML
-    private Button xong = new Button();
+    private final Button xong = new Button();
     @FXML
     public void close() {
         Stage stage = (Stage) xong.getScene().getWindow();

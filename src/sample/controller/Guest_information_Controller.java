@@ -24,34 +24,34 @@ public class Guest_information_Controller {
     }
 
     @FXML
-    private ComboBox ma_khach = new ComboBox();
+    private final ComboBox ma_khach = new ComboBox();
     @FXML
-    private TextField dien_thoai = new TextField();
+    private final TextField dien_thoai = new TextField();
     @FXML
-    private TextField ma_the_doc = new TextField();
+    private final TextField ma_the_doc = new TextField();
     @FXML
-    private TextField ten_khach = new TextField();
+    private final TextField ten_khach = new TextField();
     @FXML
-    private TextField dia_chi = new TextField();
+    private final TextField dia_chi = new TextField();
     @FXML
-    private TextField ma_the_muon = new TextField();
+    private final TextField ma_the_muon = new TextField();
 
 
 
     @FXML
-    private TableView<Customer> table = new TableView<Customer>();
+    private final TableView<Customer> table = new TableView<Customer>();
     @FXML
-    private TableColumn<Customer, String> makhach = new TableColumn<>();
+    private final TableColumn<Customer, String> makhach = new TableColumn<>();
     @FXML
-    private TableColumn<Customer, String> tenkhach = new TableColumn<>();
+    private final TableColumn<Customer, String> tenkhach = new TableColumn<>();
     @FXML
-    private TableColumn<Customer, String> dienthoai = new TableColumn<>();
+    private final TableColumn<Customer, String> dienthoai = new TableColumn<>();
     @FXML
-    private TableColumn<Customer, String> diachi = new TableColumn<>();
+    private final TableColumn<Customer, String> diachi = new TableColumn<>();
     @FXML
-    private TableColumn<Customer, String> maTD = new TableColumn<>();
+    private final TableColumn<Customer, String> maTD = new TableColumn<>();
     @FXML
-    private TableColumn<Customer, String> maTM = new TableColumn<>();
+    private final TableColumn<Customer, String> maTM = new TableColumn<>();
 
 
 
@@ -159,7 +159,7 @@ public class Guest_information_Controller {
 
     }
     @FXML
-    private Button xong = new Button();
+    private final Button xong = new Button();
     @FXML
     public void close() {
         Stage stage = (Stage) xong.getScene().getWindow();

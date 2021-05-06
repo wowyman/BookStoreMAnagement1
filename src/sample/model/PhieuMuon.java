@@ -6,10 +6,10 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class PhieuMuon {
-    private StringProperty maSoPhieuMuon;
-    private StringProperty ngayBatDau;
-    private StringProperty ngayKetthuc;
-    private IntegerProperty tongTien;
+    private final StringProperty maSoPhieuMuon;
+    private final StringProperty ngayBatDau;
+    private final StringProperty ngayKetthuc;
+    private final IntegerProperty tongTien;
     //Constructor
     public PhieuMuon() {
         maSoPhieuMuon = new SimpleStringProperty();

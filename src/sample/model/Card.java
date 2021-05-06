@@ -4,8 +4,8 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Card {
-    private StringProperty cardNumber;
-    private StringProperty ngayCapThe;
+    private final StringProperty cardNumber;
+    private final StringProperty ngayCapThe;
     private LoaiThe loaithe;
 
     //Constructor

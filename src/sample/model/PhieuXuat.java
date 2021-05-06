@@ -4,9 +4,9 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class PhieuXuat {
-    private StringProperty MSPX;
-    private StringProperty ngayXuat;
-    private StringProperty tongGiaTri;
+    private final StringProperty MSPX;
+    private final StringProperty ngayXuat;
+    private final StringProperty tongGiaTri;
 
     //Constructor
     public PhieuXuat() {

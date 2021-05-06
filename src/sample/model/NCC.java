@@ -4,12 +4,12 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class NCC {
-    private StringProperty maNCC;
-    private StringProperty name;
-    private StringProperty address;
-    private StringProperty phoneNumber;
-    private StringProperty email;
-    private StringProperty fax;
+    private final StringProperty maNCC;
+    private final StringProperty name;
+    private final StringProperty address;
+    private final StringProperty phoneNumber;
+    private final StringProperty email;
+    private final StringProperty fax;
     //Constructor
     public NCC() {
         maNCC = new SimpleStringProperty();

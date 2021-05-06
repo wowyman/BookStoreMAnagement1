@@ -6,16 +6,16 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Employee {
-    private StringProperty MSNV;
-    private StringProperty name;
-    private StringProperty gioiTinh;
-    private StringProperty ngaySinh;
-    private StringProperty address;
-    private StringProperty phoneNumber;
-    private StringProperty queQuan;
-    private IntegerProperty salary;
-    private ChucVu chucVu;
-    private Kho kho;
+    private final StringProperty MSNV;
+    private final StringProperty name;
+    private final StringProperty gioiTinh;
+    private final StringProperty ngaySinh;
+    private final StringProperty address;
+    private final StringProperty phoneNumber;
+    private final StringProperty queQuan;
+    private final IntegerProperty salary;
+    private final ChucVu chucVu;
+    private final Kho kho;
     //Constructor
     public Employee() {
         MSNV = new SimpleStringProperty();
