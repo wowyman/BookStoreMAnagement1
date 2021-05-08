@@ -1,38 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="502.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Book_information_controller">
+<AnchorPane prefHeight="490.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Book_information_controller">
     <children>
+      <ImageView fitHeight="490.0" fitWidth="611.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../wood1.jpg" />
+         </image>
+      </ImageView>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="24.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã sách" wrappingWidth="116.13671875">
+        <Text fill="WHITE" layoutX="24.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã sách" wrappingWidth="116.13671875">
             <font>
                 <Font name="Times New Roman" size="18.0" />
             </font>
         </Text>
-        <Text layoutX="23.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thể loại">
+        <Text fill="WHITE" layoutX="23.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thể loại">
             <font>
                 <Font name="Times New Roman" size="18.0" />
             </font>
         </Text>
-        <Text layoutX="25.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá sách">
+        <Text fill="WHITE" layoutX="25.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá sách">
             <font>
                 <Font name="Times New Roman" size="18.0" />
             </font>
         </Text>
-        <Text layoutX="299.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên sách">
+        <Text fill="WHITE" layoutX="299.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên sách">
             <font>
                 <Font name="Times New Roman" size="18.0" />
             </font>
         </Text>
-        <Text layoutX="300.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tác giả" wrappingWidth="107.9033203125">
+        <Text fill="WHITE" layoutX="300.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tác giả" wrappingWidth="107.9033203125">
             <font>
                 <Font name="Times New Roman" size="18.0" />
             </font>
         </Text>
-        <Text layoutX="300.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vị trí trữ">
+        <Text fill="WHITE" layoutX="300.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vị trí trữ">
             <font>
                 <Font name="Times New Roman" size="18.0" />
             </font>
@@ -44,15 +50,15 @@
         <Button layoutX="156.0" layoutY="303.0" mnemonicParsing="false" onAction="#delete_book" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
         <Button layoutX="307.0" layoutY="303.0" mnemonicParsing="false" onAction="#update_book" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
         <Button layoutX="465.0" layoutY="303.0" mnemonicParsing="false" onAction="#search_book" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
-        <Button layoutX="521.0" layoutY="470.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="90.0" text="Xong" fx:id="xong" />
-        <Text layoutX="232.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý sách" wrappingWidth="293.7016296386719">
+        <Button layoutX="521.0" layoutY="464.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="90.0" text="Xong" fx:id="xong" />
+        <Text fill="WHITE" layoutX="242.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý sách" wrappingWidth="145.70162963867188">
             <font>
                 <Font name="Times New Roman Bold" size="24.0" />
             </font>
         </Text>
-        <Text layoutX="7.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin sách" />
+        <Text fill="WHITE" layoutX="7.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin sách" />
         <ChoiceBox fx:id="vi_tri_tru" layoutX="415.0" layoutY="211.0" prefHeight="25.0" prefWidth="130.0" />
-        <Text layoutX="24.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng">
+        <Text fill="WHITE" layoutX="24.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng">
             <font>
                 <Font name="Times New Roman" size="18.0" />
             </font>

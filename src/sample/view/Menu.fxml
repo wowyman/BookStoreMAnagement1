@@ -7,72 +7,57 @@
 
 <AnchorPane fx:id="appMother" prefHeight="350.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MenuController">
    <children>
-      <BorderPane layoutX="-94.0" layoutY="-26.0" prefHeight="350.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <top>
-            <MenuBar prefHeight="33.0" prefWidth="688.0" BorderPane.alignment="CENTER">
-              <menus>
-                <Menu mnemonicParsing="false" text="Hệ Thống">
-                  <items>
-                    <MenuItem mnemonicParsing="false" onAction="#user_controller" text="Quản trị người dùng" />
-                        <MenuItem mnemonicParsing="false" onAction="#LoginController" text="Logout" />
-                        <MenuItem mnemonicParsing="false" onAction="#close" text="Exit" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Quản lý danh mục">
-                  <items>
-                    <MenuItem mnemonicParsing="false" onAction="#Book_supplier_controller" text="Quản lý nhà cung cấp" />
-                        <MenuItem mnemonicParsing="false" onAction="#Employee_controller" text="Quản lý nhân viên" />
-                        <MenuItem mnemonicParsing="false" onAction="#Guest_information_Controller" text="Quản lý khách" />
-                        <MenuItem mnemonicParsing="false" onAction="#Book_information_controller_action" text="Quản lý sách" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Quản lý nhập xuất">
-                  <items>
-                    <MenuItem mnemonicParsing="false" onAction="#phieunhapController" text="Phiếu nhập" />
-                        <MenuItem mnemonicParsing="false" onAction="#phieuxuat" text="Phiếu xuất" />
-                  </items>
-                </Menu>
-                  <Menu mnemonicParsing="false" text="Quản lý quầy">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#phieugiaoca" text="Lập phiếu giao ca" />
-                        <MenuItem mnemonicParsing="false" onAction="#phieumuon" text="Lập phiếu mượn" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Quản lý thẻ">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#Managementcardguest" text="Quản lý thẻ khách" />
-                        <MenuItem mnemonicParsing="false" onAction="#themuon" text="Quản lý thẻ mượn" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="More..">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#ttnhom" text="Thông tin cơ bản" />
-                     </items>
-                  </Menu>
-              </menus>
-            </MenuBar>
-         </top>
-         <center>
-            <SplitPane dividerPositions="0.004297994269340974" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="354.0" />
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="346.0">
-                     <children>
-                        <ImageView fx:id="imageView" fitHeight="318.0" fitWidth="700.0" layoutX="-4.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../anhnen.jpg" />
-                           </image>
-                        </ImageView>
-                        <Text fill="RED" layoutX="141.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="    Hệ thống quản lý thư viện sách" wrappingWidth="537.0">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </AnchorPane>
-              </items>
-            </SplitPane>
-         </center>
-      </BorderPane>
+      <MenuBar prefHeight="33.0" prefWidth="700.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Hệ Thống">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#user_controller" text="Quản trị người dùng" />
+                  <MenuItem mnemonicParsing="false" onAction="#LoginController" text="Logout" />
+                  <MenuItem mnemonicParsing="false" onAction="#close" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Quản lý danh mục">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#Book_supplier_controller" text="Quản lý nhà cung cấp" />
+                  <MenuItem mnemonicParsing="false" onAction="#Employee_controller" text="Quản lý nhân viên" />
+                  <MenuItem mnemonicParsing="false" onAction="#Guest_information_Controller" text="Quản lý khách" />
+                  <MenuItem mnemonicParsing="false" onAction="#Book_information_controller_action" text="Quản lý sách" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Quản lý nhập xuất">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#phieunhapController" text="Phiếu nhập" />
+                  <MenuItem mnemonicParsing="false" onAction="#phieuxuat" text="Phiếu xuất" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Quản lý quầy">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#phieugiaoca" text="Lập phiếu giao ca" />
+                  <MenuItem mnemonicParsing="false" onAction="#phieumuon" text="Lập phiếu mượn" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Quản lý thẻ">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#Managementcardguest" text="Quản lý thẻ khách" />
+                  <MenuItem mnemonicParsing="false" onAction="#themuon" text="Quản lý thẻ mượn" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="More..">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ttnhom" text="Thông tin cơ bản" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="278.0" fitWidth="694.0" layoutX="3.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../anhnen.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="182.0" layoutY="33.0" prefHeight="38.0" prefWidth="325.0" text="Hệ thống quản lý thư viện" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold" size="28.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

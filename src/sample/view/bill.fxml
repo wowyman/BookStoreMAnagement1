@@ -1,46 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="490.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="300.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày lập" wrappingWidth="116.13671875">
+      <ImageView fitHeight="490.0" fitWidth="611.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../wood1.jpg" />
+         </image>
+      </ImageView>
+        <Text fill="WHITE" layoutX="300.0" layoutY="138.576171875" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày lập" wrappingWidth="116.13671875">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="19.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã bên nhận">
+        <Text fill="#fcf8f8" layoutX="17.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã bên nhận">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="17.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã phiếu xuất">
+        <Text fill="WHITE" layoutX="17.0" layoutY="139.576171875" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã phiếu xuất">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="300.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhân viên">
+        <Text fill="WHITE" layoutX="300.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhân viên">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <TextField layoutX="143.0" layoutY="139.0" prefHeight="25.0" prefWidth="130.0" />
+        <TextField alignment="CENTER" layoutX="142.0" layoutY="127.0" prefHeight="25.0" prefWidth="130.0" />
         <Button layoutX="6.0" layoutY="231.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
         <Button layoutX="165.0" layoutY="231.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="In" />
         <Button layoutX="339.0" layoutY="231.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="64.0" text="Lưu" />
         <Button layoutX="472.0" layoutY="231.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
-        <Button layoutX="152.0" layoutY="448.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Chấp nhận" />
-        <Button layoutX="380.0" layoutY="448.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Hủy" />
-        <Text layoutX="192.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý phiếu Xuất" wrappingWidth="293.7016296386719">
+        <Button layoutX="494.0" layoutY="448.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Xong" />
+        <Text fill="#f8f4f1" layoutX="159.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý phiếu Xuất" textAlignment="CENTER" wrappingWidth="293.7016296386719">
             <font>
-                <Font name="Elephant" size="24.0" />
+                <Font name="System Bold" size="24.0" />
             </font>
         </Text>
-        <Text layoutX="8.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin hàng nhập" />
-        <ChoiceBox layoutX="415.0" layoutY="139.0" prefHeight="25.0" prefWidth="130.0" />
+        <Text fill="WHITE" layoutX="6.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin hàng nhập" />
+        <ChoiceBox layoutX="415.0" layoutY="127.0" prefHeight="25.0" prefWidth="130.0" />
         <ChoiceBox layoutX="142.0" layoutY="184.0" prefHeight="25.0" prefWidth="130.0" />
         <ChoiceBox layoutX="415.0" layoutY="185.0" prefHeight="25.0" prefWidth="130.0" />
         <ScrollPane layoutX="16.0" layoutY="344.0" prefHeight="97.0" prefWidth="568.0">
@@ -91,9 +95,9 @@
                 </MenuBar>
             </content>
         </ScrollPane>
-        <Text layoutX="179.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền xuất" />
-        <Text layoutX="177.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền bằng chữ" />
-        <TextField layoutX="451.0" layoutY="262.0" />
-        <TextField layoutX="286.0" layoutY="299.0" prefHeight="25.0" prefWidth="325.0" />
+        <Text fill="#fffcfc" fontSmoothingType="LCD" layoutX="169.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền xuất" />
+        <Text fill="WHITE" layoutX="168.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền bằng chữ" />
+        <TextField layoutX="287.0" layoutY="262.0" prefHeight="25.0" prefWidth="313.0" />
+        <TextField layoutX="286.0" layoutY="299.0" prefHeight="25.0" prefWidth="313.0" />
     </children>
 </AnchorPane>

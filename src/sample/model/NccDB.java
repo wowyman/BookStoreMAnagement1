@@ -8,10 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class NccDB {
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
 
-
-    }
 
 
     public static void insertNCC(String maNCC, String name, String address, String phoneNumber, String email, String fax) throws SQLException, ClassNotFoundException {

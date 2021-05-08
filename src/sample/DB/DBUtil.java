@@ -12,20 +12,20 @@ public class DBUtil {
     private static final String PASSWORD = "";
     private static Connection connection = null;
 
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
-
-        ResultSet rs = dbExecuteQuery("select * from book");
-        if(rs != null) {
-            while (rs.next()) {
-                System.out.println(rs.getString(1) + "  " + rs.getString(2) + "  "
-                                 + rs.getString(3) + "  " + rs.getInt(4) + "  "
-                                 + rs.getString(5) + "  " + rs.getDate(6)+ "  "
-                                 + rs.getInt(7)+ "  " + rs.getInt(8) + "  " + rs.getInt(9));
-            }
-        } else {
-            System.out.println("rs bi null. Xem lai dbExecuteQuery");
-        }
-    }
+//    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+//
+//        ResultSet rs = dbExecuteQuery("select * from book");
+//        if(rs != null) {
+//            while (rs.next()) {
+//                System.out.println(rs.getString(1) + "  " + rs.getString(2) + "  "
+//                                 + rs.getString(3) + "  " + rs.getInt(4) + "  "
+//                                 + rs.getString(5) + "  " + rs.getDate(6)+ "  "
+//                                 + rs.getInt(7)+ "  " + rs.getInt(8) + "  " + rs.getInt(9));
+//            }
+//        } else {
+//            System.out.println("rs bi null. Xem lai dbExecuteQuery");
+//        }
+//    }
 
     public static void dbDisconnect() throws SQLException {
         if (connection != null && !connection.isClosed()) {

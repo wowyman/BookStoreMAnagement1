@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="303.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoginController">
     <children>
+      <ImageView fitHeight="303.0" fitWidth="668.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../login.jpg" />
+         </image>
+      </ImageView>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text layoutX="95.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên đăng nhập" wrappingWidth="143.6171875">
             <font>
@@ -24,7 +30,7 @@
             </font>
         </Text>
       <PasswordField fx:id="password_id" layoutX="260.0" layoutY="172.0" prefHeight="35.0" prefWidth="253.0" promptText="Password" />
-      <Button layoutX="504.0" layoutY="228.0" mnemonicParsing="false" onAction="#login_action" prefHeight="25.0" prefWidth="105.0" text="Đăng nhập" />
-      <Button layoutX="504.0" layoutY="264.0" mnemonicParsing="false" onAction="#forget_action" prefHeight="25.0" prefWidth="134.0" text="Quên mật khẩu ?" />
+      <Button defaultButton="true" layoutX="504.0" layoutY="228.0" mnemonicParsing="false" onAction="#login_action" prefHeight="25.0" prefWidth="105.0" text="Đăng nhập" />
+      <Button defaultButton="true" layoutX="504.0" layoutY="264.0" mnemonicParsing="false" onAction="#forget_action" prefHeight="25.0" prefWidth="134.0" text="Quên mật khẩu ?" />
     </children>
 </AnchorPane>

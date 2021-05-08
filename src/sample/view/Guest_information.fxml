@@ -2,38 +2,44 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="449.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Guest_information_Controller">
+<AnchorPane prefHeight="490.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Guest_information_Controller">
    <children>
+      <ImageView fitHeight="490.0" fitWidth="611.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../wood1.jpg" />
+         </image>
+      </ImageView>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="28.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã khách" wrappingWidth="82.13671875">
+      <Text fill="WHITE" layoutX="28.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã khách" wrappingWidth="82.13671875">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="29.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Điện thoại">
+      <Text fill="WHITE" layoutX="29.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Điện thoại">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="29.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã thẻ đọc">
+      <Text fill="WHITE" layoutX="29.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã thẻ đọc">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="303.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên khách">
+      <Text fill="WHITE" layoutX="303.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên khách">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="307.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ" wrappingWidth="107.9033203125">
+      <Text fill="WHITE" layoutX="307.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ" wrappingWidth="107.9033203125">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="303.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã thẻ mượn">
+      <Text fill="WHITE" layoutX="303.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã thẻ mượn">
          <font>
             <Font size="18.0" />
          </font>
@@ -48,14 +54,14 @@
       <Button layoutX="131.0" layoutY="255.0" mnemonicParsing="false" onAction="#delete_customer" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
       <Button layoutX="208.0" layoutY="255.0" mnemonicParsing="false" onAction="#update_customer" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
       <Button layoutX="282.0" layoutY="255.0" mnemonicParsing="false" onAction="#search_customer" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
-      <Button layoutX="511.0" layoutY="414.0" mnemonicParsing="false" onAction="#close" prefHeight="0.0" prefWidth="82.0" text="Xong" fx:id="xong" />
-      <Text layoutX="151.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý thông tin khách" wrappingWidth="462.7016296386719">
+      <Button layoutX="518.0" layoutY="451.0" mnemonicParsing="false" onAction="#close" prefHeight="0.0" prefWidth="82.0" text="Xong" fx:id="xong" />
+      <Text fill="WHITE" layoutX="151.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý thông tin khách" wrappingWidth="462.7016296386719">
          <font>
-            <Font name="Elephant" size="24.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="14.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khách" />
-      <TableView fx:id="table" layoutX="29.0" layoutY="310.0" prefHeight="93.0" prefWidth="556.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="310.0">
+      <Text fill="WHITE" layoutX="14.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khách" />
+      <TableView fx:id="table" layoutX="29.0" layoutY="310.0" prefHeight="131.0" prefWidth="556.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="310.0">
         <columns>
             <TableColumn fx:id="makhach" minWidth="0.0" prefWidth="100.0" text="mã khách" />
             <TableColumn fx:id="tenkhach" prefWidth="148.0" text="Tên Khách" />

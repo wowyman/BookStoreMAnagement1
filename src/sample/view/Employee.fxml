@@ -1,76 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="514.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Employee_controller">
+<AnchorPane prefHeight="490.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Employee_controller">
     <children>
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="17.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhân viên" wrappingWidth="116.13671875">
+      <ImageView fitHeight="490.0" fitWidth="611.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../wood1.jpg" />
+         </image>
+      </ImageView>
+        <Text fill="WHITE" layoutX="15.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhân viên" wrappingWidth="116.13671875">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="16.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Điện thoại">
+        <Text fill="WHITE" layoutX="14.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Điện thoại">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="19.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chức vụ">
+        <Text fill="WHITE" layoutX="17.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chức vụ">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="299.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nhân viên">
+        <Text fill="WHITE" layoutX="297.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nhân viên">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="300.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ" wrappingWidth="107.9033203125">
+        <Text fill="WHITE" layoutX="298.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ" wrappingWidth="107.9033203125">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="300.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày sinh">
+        <Text fill="WHITE" layoutX="298.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày sinh">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <TextField fx:id="dien_thoai" layoutX="141.0" layoutY="167.0" prefHeight="25.0" prefWidth="130.0" />
-        <TextField fx:id="ten_nv" layoutX="415.0" layoutY="122.0" prefHeight="25.0" prefWidth="130.0" />
-        <TextField fx:id="dia_chi" layoutX="415.0" layoutY="167.0" prefHeight="25.0" prefWidth="130.0" />
-        <Button layoutX="32.0" layoutY="328.0" mnemonicParsing="false" onAction="#add_employee" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
-        <Button layoutX="174.0" layoutY="328.0" mnemonicParsing="false" onAction="#delete_employee" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
-        <Button layoutX="322.0" layoutY="328.0" mnemonicParsing="false" onAction="#update_employee" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
-        <Button layoutX="446.0" layoutY="328.0" mnemonicParsing="false" onAction="#search_employee" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
-        <Button layoutX="519.0" layoutY="481.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="90.0" text="Xong" fx:id="xong" />
-        <Text layoutX="152.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý thông tin nhân viên" wrappingWidth="462.7016296386719">
+        <TextField fx:id="dien_thoai" layoutX="139.0" layoutY="139.0" prefHeight="25.0" prefWidth="130.0" />
+        <TextField fx:id="ten_nv" layoutX="413.0" layoutY="94.0" prefHeight="25.0" prefWidth="130.0" />
+        <TextField fx:id="dia_chi" layoutX="413.0" layoutY="139.0" prefHeight="25.0" prefWidth="130.0" />
+        <Button layoutX="30.0" layoutY="300.0" mnemonicParsing="false" onAction="#add_employee" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
+        <Button layoutX="172.0" layoutY="300.0" mnemonicParsing="false" onAction="#delete_employee" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
+        <Button layoutX="320.0" layoutY="300.0" mnemonicParsing="false" onAction="#update_employee" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
+        <Button layoutX="444.0" layoutY="300.0" mnemonicParsing="false" onAction="#search_employee" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
+        <Button layoutX="517.0" layoutY="453.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="90.0" text="Xong" fx:id="xong" />
+        <Text fill="WHITE" layoutX="74.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý thông tin nhân viên" textAlignment="CENTER" wrappingWidth="462.7016296386719">
             <font>
-                <Font name="Elephant" size="24.0" />
+                <Font name="System Bold" size="24.0" />
             </font>
         </Text>
-        <Text layoutX="8.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khách" />
-      <Text layoutX="23.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lương ">
+        <Text fill="WHITE" layoutX="6.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin khách" />
+      <Text fill="WHITE" layoutX="21.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lương ">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="299.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nơi làm việc">
+      <Text fill="WHITE" layoutX="297.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nơi làm việc">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="30.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giới tính">
+      <Text fill="WHITE" layoutX="28.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giới tính">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField fx:id="luong" layoutX="141.0" layoutY="253.0" prefHeight="25.0" prefWidth="130.0" />
-      <CheckBox fx:id="nam" layoutX="141.0" layoutY="303.0" mnemonicParsing="false" text="Nam" />
-      <CheckBox fx:id="nu" layoutX="206.0" layoutY="303.0" mnemonicParsing="false" text="Nữ" />
-      <ComboBox fx:id="ma_nv" layoutX="141.0" layoutY="121.0" prefHeight="25.0" prefWidth="130.0" />
-      <TableView fx:id="table" layoutX="3.0" layoutY="377.0" prefHeight="93.0" prefWidth="609.0">
+      <TextField fx:id="luong" layoutX="139.0" layoutY="225.0" prefHeight="25.0" prefWidth="130.0" />
+      <CheckBox fx:id="nam" layoutX="139.0" layoutY="275.0" mnemonicParsing="false" text="Nam" textFill="#55ff00" />
+      <CheckBox fx:id="nu" layoutX="204.0" layoutY="275.0" mnemonicParsing="false" text="Nữ" textFill="#e1bf00" />
+      <ComboBox fx:id="ma_nv" layoutX="139.0" layoutY="93.0" prefHeight="25.0" prefWidth="130.0" />
+      <TableView fx:id="table" layoutX="1.0" layoutY="349.0" prefHeight="93.0" prefWidth="609.0">
         <columns>
           <TableColumn fx:id="manv" prefWidth="70.0" text="Mã nv" />
             <TableColumn fx:id="tennv" prefWidth="73.0" text="Tên nv" />
@@ -82,8 +87,8 @@
             <TableColumn fx:id="noilamviec" prefWidth="82.0" text="Nơi làm việc" />
         </columns>
       </TableView>
-      <DatePicker fx:id="ngay_sinh" layoutX="415.0" layoutY="210.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="130.0" promptText="yyyy-mm-dd" />
-      <ChoiceBox fx:id="chuc_vu" layoutX="141.0" layoutY="210.0" prefHeight="25.0" prefWidth="130.0" />
-      <ChoiceBox fx:id="noi_lam_viec" layoutX="415.0" layoutY="253.0" prefHeight="25.0" prefWidth="130.0" />
+      <DatePicker fx:id="ngay_sinh" layoutX="413.0" layoutY="182.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="130.0" promptText="yyyy-mm-dd" />
+      <ChoiceBox fx:id="chuc_vu" layoutX="139.0" layoutY="182.0" prefHeight="25.0" prefWidth="130.0" />
+      <ChoiceBox fx:id="noi_lam_viec" layoutX="413.0" layoutY="225.0" prefHeight="25.0" prefWidth="130.0" />
     </children>
 </AnchorPane>

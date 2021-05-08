@@ -2,38 +2,44 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="444.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Book_supplier_controller">
+<AnchorPane prefHeight="490.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Book_supplier_controller">
     <children>
+      <ImageView fitHeight="490.0" fitWidth="611.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../wood1.jpg" />
+         </image>
+      </ImageView>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="22.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhà CC" wrappingWidth="100.13671875">
+        <Text fill="WHITE" layoutX="22.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhà CC" wrappingWidth="100.13671875">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="23.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Điện thoại">
+        <Text fill="WHITE" layoutX="23.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Điện thoại">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="22.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+        <Text fill="WHITE" layoutX="22.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="300.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nhà CC">
+        <Text fill="WHITE" layoutX="300.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nhà CC">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="300.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ" wrappingWidth="107.9033203125">
+        <Text fill="WHITE" layoutX="300.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ" wrappingWidth="107.9033203125">
             <font>
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="300.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fax">
+        <Text fill="WHITE" layoutX="300.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fax">
             <font>
                 <Font size="18.0" />
             </font>
@@ -44,17 +50,17 @@
         <TextField fx:id="dia_chi" layoutX="415.0" layoutY="167.0" />
         <TextField fx:id="fax" layoutX="415.0" layoutY="210.0" />
         <Button layoutX="32.0" layoutY="255.0" mnemonicParsing="false" onAction="#add_ncc" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
-        <Button layoutX="122.0" layoutY="255.0" mnemonicParsing="false" onAction="#delete_ncc" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
-        <Button layoutX="221.0" layoutY="255.0" mnemonicParsing="false" onAction="#update_ncc" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
-        <Button layoutX="326.0" layoutY="255.0" mnemonicParsing="false" onAction="#search_ncc" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
-        <Button layoutX="503.0" layoutY="414.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="90.0" text="Xong" fx:id="xong" />
-        <Text layoutX="101.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý thông tin nhà cung cấp" wrappingWidth="505.7016296386719">
+        <Button layoutX="184.0" layoutY="255.0" mnemonicParsing="false" onAction="#delete_ncc" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
+        <Button layoutX="344.0" layoutY="255.0" mnemonicParsing="false" onAction="#update_ncc" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
+        <Button layoutX="474.0" layoutY="255.0" mnemonicParsing="false" onAction="#search_ncc" prefHeight="17.0" prefWidth="90.0" text="Tìm kiếm" />
+        <Button layoutX="507.0" layoutY="451.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="90.0" text="Xong" fx:id="xong" />
+        <Text fill="WHITE" layoutX="60.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý thông tin nhà cung cấp" textAlignment="CENTER" wrappingWidth="505.7016296386719">
             <font>
-                <Font name="Elephant" size="24.0" />
+                <Font name="System Bold" size="24.0" />
             </font>
         </Text>
-        <Text layoutX="17.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin nhà cung cấp" wrappingWidth="158.9921875" />
-        <TableView fx:id="table" layoutX="29.0" layoutY="310.0" prefHeight="93.0" prefWidth="556.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="310.0">
+        <Text fill="WHITE" layoutX="17.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thông tin nhà cung cấp" wrappingWidth="158.9921875" />
+        <TableView fx:id="table" layoutX="29.0" layoutY="310.0" prefHeight="133.0" prefWidth="553.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="310.0">
             <columns>
                 <TableColumn fx:id="mancc" minWidth="0.0" prefWidth="100.0" text="Mã NCC" />
                 <TableColumn fx:id="tenncc" prefWidth="148.0" text="Tên NCC" />
