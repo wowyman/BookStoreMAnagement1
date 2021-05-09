@@ -60,7 +60,7 @@ public class Guest_information_Controller {
         for (Customer customer : cusList) {
             options.add(customer.getCmnd());
         }
-        //
+
         ma_khach.setEditable(true);
         ma_khach.getItems().addAll(options);
         ma_khach.getEditor().setOnMouseClicked(new EventHandler<MouseEvent>() {
