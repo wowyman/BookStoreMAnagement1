@@ -18,17 +18,17 @@ public class User_controller {
     }
 
     @FXML
-    private final ComboBox quyen_su_dung = new ComboBox();
+    private  ComboBox quyen_su_dung = new ComboBox();
     @FXML
-    private final ComboBox chuc_vu = new ComboBox();
+    private  ComboBox chuc_vu = new ComboBox();
     @FXML
-    private final ComboBox ten_nguoi_dung = new ComboBox();
+    private  ComboBox ten_nguoi_dung = new ComboBox();
     @FXML
-    private final TextField ten_dang_nhap = new TextField();
+    private  TextField ten_dang_nhap = new TextField();
     @FXML
-    private final PasswordField mat_khau = new PasswordField();
+    private  PasswordField mat_khau = new PasswordField();
     @FXML
-    private final PasswordField xac_nhan_mat_khau = new PasswordField();
+    private  PasswordField xac_nhan_mat_khau = new PasswordField();
 
 
     @FXML

@@ -44,9 +44,9 @@
             </font>
         </Text>
         <TextField fx:id="ten_dang_nhap" layoutX="187.0" layoutY="138.0" prefHeight="25.0" prefWidth="108.0" promptText="user name" />
-        <Button layoutX="164.0" layoutY="255.0" mnemonicParsing="false" onAction="#add_user" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
-        <Button layoutX="334.0" layoutY="255.0" mnemonicParsing="false" onAction="#delete_user" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
-        <Button layoutX="476.0" layoutY="255.0" mnemonicParsing="false" onAction="#update_user" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
+        <Button layoutX="94.0" layoutY="222.0" mnemonicParsing="false" onAction="#add_user" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
+        <Button layoutX="247.0" layoutY="222.0" mnemonicParsing="false" onAction="#delete_user" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
+        <Button layoutX="430.0" layoutY="222.0" mnemonicParsing="false" onAction="#update_user" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
         <Button layoutX="580.0" layoutY="267.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="75.0" text="Xong" fx:id="xong" />
         <Text fill="#bf0808" layoutX="-38.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý hệ thống người dùng" textAlignment="CENTER" wrappingWidth="447.7016296386719">
             <font>
