@@ -32,19 +32,19 @@ public class PhieunhapController {
     private final TextField tong_tien_bang_chu = new TextField();
 
     @FXML
-    private final TableView<Book> table = new TableView<>();
+    private  TableView<Book> table = new TableView<>();
     @FXML
-    private final TableColumn<Book, String> masach = new TableColumn<>();
+    private  TableColumn<Book, String> masach = new TableColumn<>();
     @FXML
-    private final TableColumn<Book, String> tacgia = new TableColumn<>();
+    private  TableColumn<Book, String> tacgia = new TableColumn<>();
     @FXML
-    private final TableColumn<Book, String> tensach = new TableColumn<>();
+    private  TableColumn<Book, String> tensach = new TableColumn<>();
     @FXML
-    private final TableColumn<Book, String> theloai = new TableColumn<>();
+    private  TableColumn<Book, String> theloai = new TableColumn<>();
     @FXML
-    private final TableColumn<Book, String> gia = new TableColumn<>();
+    private  TableColumn<Book, String> gia = new TableColumn<>();
     @FXML
-    private final TableColumn<Book, String> soluong = new TableColumn<>();
+    private  TableColumn<Book, String> soluong = new TableColumn<>();
 
 
 

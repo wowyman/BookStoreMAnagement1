@@ -44,7 +44,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <ComboBox fx:id="ma_khach" layoutX="122.0" layoutY="121.0" prefWidth="150.0" />
+      <ComboBox fx:id="ma_khach" editable="true" layoutX="122.0" layoutY="121.0" prefWidth="150.0" />
       <TextField fx:id="dien_thoai" layoutX="122.0" layoutY="167.0" />
       <TextField fx:id="ma_the_doc" layoutX="122.0" layoutY="211.0" />
       <TextField fx:id="ten_khach" layoutX="415.0" layoutY="122.0" />

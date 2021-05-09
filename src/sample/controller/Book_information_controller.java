@@ -6,10 +6,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import sample.Main;
-import sample.model.*;
+import sample.model.Book;
+import sample.model.BookDB;
+import sample.model.Kho;
+import sample.model.KhoDB;
 
 import java.sql.SQLException;
-import java.time.format.DateTimeFormatter;
 
 public class Book_information_controller {
     public static Main main;
@@ -19,38 +21,38 @@ public class Book_information_controller {
     }
 
     @FXML
-    private final ComboBox ma_sach = new ComboBox();
+    private ComboBox ma_sach = new ComboBox();
     @FXML
-    private final TextField ten_sach = new TextField();
+    private TextField ten_sach = new TextField();
     @FXML
-    private final TextField the_loai = new TextField();
+    private  TextField the_loai = new TextField();
     @FXML
-    private final TextField tac_gia = new TextField();
+    private  TextField tac_gia = new TextField();
     @FXML
-    private final ChoiceBox vi_tri_tru = new ChoiceBox();
+    private  ChoiceBox vi_tri_tru = new ChoiceBox();
     @FXML
-    private final TextField gia = new TextField();
+    private  TextField gia = new TextField();
     @FXML
-    private final TextField so_luong = new TextField();
+    private  TextField so_luong = new TextField();
 
 
 
     @FXML
-    private final TableView<Book> table = new TableView<Book>();
+    private  TableView<Book> table = new TableView<Book>();
     @FXML
-    private final TableColumn<Book, String> masach= new TableColumn<>();
+    private  TableColumn<Book, String> masach= new TableColumn<>();
     @FXML
-    private final TableColumn<Book, String> tensach = new TableColumn<>();
+    private  TableColumn<Book, String> tensach = new TableColumn<>();
     @FXML
-    private final TableColumn<Book, String> theloai = new TableColumn<>();
+    private  TableColumn<Book, String> theloai = new TableColumn<>();
     @FXML
-    private final TableColumn<Book, String> tacgia = new TableColumn<>();
+    private  TableColumn<Book, String> tacgia = new TableColumn<>();
     @FXML
-    private final TableColumn<Book, String> giasach = new TableColumn<>();
+    private  TableColumn<Book, String> giasach = new TableColumn<>();
     @FXML
-    private final TableColumn<Book, String> vitritru = new TableColumn<>();
+    private  TableColumn<Book, String> vitritru = new TableColumn<>();
     @FXML
-    private final TableColumn<Book, Integer> soluong = new TableColumn<>();
+    private  TableColumn<Book, Integer> soluong = new TableColumn<>();
 
 
 

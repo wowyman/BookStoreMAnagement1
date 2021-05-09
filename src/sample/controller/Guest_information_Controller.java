@@ -2,15 +2,12 @@ package sample.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 import sample.Main;
-import sample.model.Card;
 import sample.model.Customer;
 import sample.model.CustomerDB;
 
@@ -24,34 +21,34 @@ public class Guest_information_Controller {
     }
 
     @FXML
-    private final ComboBox ma_khach = new ComboBox();
+    private  ComboBox ma_khach = new ComboBox();
     @FXML
-    private final TextField dien_thoai = new TextField();
+    private  TextField dien_thoai = new TextField();
     @FXML
-    private final TextField ma_the_doc = new TextField();
+    private  TextField ma_the_doc = new TextField();
     @FXML
-    private final TextField ten_khach = new TextField();
+    private  TextField ten_khach = new TextField();
     @FXML
-    private final TextField dia_chi = new TextField();
+    private  TextField dia_chi = new TextField();
     @FXML
-    private final TextField ma_the_muon = new TextField();
+    private  TextField ma_the_muon = new TextField();
 
 
 
     @FXML
-    private final TableView<Customer> table = new TableView<Customer>();
+    private  TableView<Customer> table = new TableView<Customer>();
     @FXML
-    private final TableColumn<Customer, String> makhach = new TableColumn<>();
+    private  TableColumn<Customer, String> makhach = new TableColumn<>();
     @FXML
-    private final TableColumn<Customer, String> tenkhach = new TableColumn<>();
+    private  TableColumn<Customer, String> tenkhach = new TableColumn<>();
     @FXML
-    private final TableColumn<Customer, String> dienthoai = new TableColumn<>();
+    private  TableColumn<Customer, String> dienthoai = new TableColumn<>();
     @FXML
-    private final TableColumn<Customer, String> diachi = new TableColumn<>();
+    private  TableColumn<Customer, String> diachi = new TableColumn<>();
     @FXML
-    private final TableColumn<Customer, String> maTD = new TableColumn<>();
+    private  TableColumn<Customer, String> maTD = new TableColumn<>();
     @FXML
-    private final TableColumn<Customer, String> maTM = new TableColumn<>();
+    private  TableColumn<Customer, String> maTM = new TableColumn<>();
 
 
 

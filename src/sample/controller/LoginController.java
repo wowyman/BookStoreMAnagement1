@@ -65,7 +65,6 @@ public class LoginController {
             Image image = new Image(inputstream);
 
 
-
             Parent root = loader.load();
 
 
@@ -75,6 +74,11 @@ public class LoginController {
             ob.primaryStage.setScene(new Scene(root));
             ob.primaryStage.show();
 
+        } else {
+            Alert alert = new Alert (Alert.AlertType.INFORMATION);
+            alert.setTitle("Attention");
+            alert.setContentText("Tên đăng nhập hoặc mật khẩu không đúng.");
+            alert.show();
         }
 
 

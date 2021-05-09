@@ -13,6 +13,7 @@
             <Image url="@../wood1.jpg" />
          </image>
       </ImageView>
+        <ComboBox fx:id="ma_ncc" editable="true" layoutX="122.0" layoutY="122.0" prefHeight="25.0" prefWidth="149.0" />
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
         <Text fill="WHITE" layoutX="22.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhà CC" wrappingWidth="100.13671875">
             <font>
@@ -76,6 +77,5 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
-      <ComboBox fx:id="ma_ncc" layoutX="122.0" layoutY="122.0" prefWidth="150.0" />
     </children>
 </AnchorPane>

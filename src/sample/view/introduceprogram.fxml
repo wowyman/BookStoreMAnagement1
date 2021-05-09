@@ -12,7 +12,14 @@
             <Image url="@../1.png" />
          </image>
       </ImageView>
-      <Text layoutX="214.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phiên bản :1.0" wrappingWidth="80.150390625" />
-      <TextArea layoutX="214.0" layoutY="25.0" prefHeight="186.0" prefWidth="458.0" text="- Phần mềm quản lý thư viện sách&#10;- Đối tượng sử dụng : nhà sách, thư viện, trung tâm giao dịch sách...&#10;- Các chức năng được mô tả ở file hướng dẫn sử dụng được tải kèm&#10;  cùng với phần mềm.&#10;- Các thắc mắc hoặc yêu cầu hỗ trợ liên hệ :&#10;   + daiduongz@gmail.com, thienluccaothu@gmail.com, cuongcto@gmail.com&#10;   +SDT: 0987654321&#10; Các thành viên nhóm : Đỗ Đại Dương, Lê Mạnh Cường&#10;                                      Lê Thiên Lực, Mai Công Danh&#10;" />
+      <TextArea editable="false" layoutX="214.0" layoutY="40.0" prefHeight="170.0" prefWidth="458.0" text="- Phần mềm quản lý thư viện sách&#10;- Đối tượng sử dụng : nhà sách, thư viện, trung tâm giao dịch sách...&#10;- Các chức năng được mô tả ở file hướng dẫn sử dụng được tải kèm&#10;  cùng với phần mềm.&#10;- Các thắc mắc hoặc yêu cầu hỗ trợ liên hệ :&#10;   + daiduongz@gmail.com, thienluccaothu@gmail.com, cuongcto@gmail.com&#10;   +SDT: 0987654321&#10; Các thành viên nhóm : Đỗ Đại Dương, Lê Mạnh Cường&#10;                                      Lê Thiên Lực, Mai Công Danh&#10;">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font></TextArea>
+      <Label layoutX="385.0" layoutY="4.0" prefHeight="36.0" prefWidth="117.0" text="Phiên bản 1.0" textFill="#ee0000">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

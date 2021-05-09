@@ -2,15 +2,14 @@ package sample.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 import sample.Main;
-import sample.model.*;
+import sample.model.NCC;
+import sample.model.NccDB;
 
 import java.sql.SQLException;
 
@@ -22,34 +21,34 @@ public class Book_supplier_controller {
     }
 
     @FXML
-    private final ComboBox ma_ncc = new ComboBox();
+    private ComboBox<String> ma_ncc;// = new ComboBox<String>();
     @FXML
-    private final TextField dien_thoai = new TextField();
+    private TextField dien_thoai = new TextField();
     @FXML
-    private final TextField ten_ncc = new TextField();
+    private TextField ten_ncc = new TextField();
     @FXML
-    private final TextField email = new TextField();
+    private TextField email = new TextField();
     @FXML
-    private final TextField dia_chi = new TextField();
+    private TextField dia_chi = new TextField();
     @FXML
-    private final TextField fax = new TextField();
+    private TextField fax = new TextField();
 
 
 
     @FXML
-    private final TableView<NCC> table = new TableView<NCC>();
+    private TableView<NCC> table = new TableView<NCC>();
     @FXML
-    private final TableColumn<NCC, String> mancc= new TableColumn<>();
+    private TableColumn<NCC, String> mancc= new TableColumn<>();
     @FXML
-    private final TableColumn<NCC, String> tenncc = new TableColumn<>();
+    private TableColumn<NCC, String> tenncc = new TableColumn<>();
     @FXML
-    private final TableColumn<NCC, String> dienthoai = new TableColumn<>();
+    private TableColumn<NCC, String> dienthoai = new TableColumn<>();
     @FXML
-    private final TableColumn<NCC, String> Email = new TableColumn<>();
+    private TableColumn<NCC, String> Email = new TableColumn<>();
     @FXML
-    private final TableColumn<NCC, String> Fax = new TableColumn<>();
+    private TableColumn<NCC, String> Fax = new TableColumn<>();
     @FXML
-    private final TableColumn<NCC, String> diachi = new TableColumn<>();
+    private TableColumn<NCC, String> diachi = new TableColumn<>();
 
 
 
@@ -60,16 +59,22 @@ public class Book_supplier_controller {
         ObservableList<String> options = FXCollections.observableArrayList();
         for (NCC ncc : nccList) {
             options.add(ncc.getMaNCC());
+            System.out.println("-----------------------"+ncc.getMaNCC()+"-------------------------");
         }
         //
+
+
         ma_ncc.setEditable(true);
-        ma_ncc.getItems().addAll(options);
+        ma_ncc.setItems(options);
         ma_ncc.getEditor().setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 System.out.println("ccccccccccccc");
             }
         });
+
+        //System.out.println("-----------------"+options.get(2)+"-------------------------");
+
         mancc.setCellValueFactory(c -> c.getValue().maNCCProperty());
         tenncc.setCellValueFactory(c -> c.getValue().nameProperty());
         dienthoai.setCellValueFactory(c -> c.getValue().phoneNumberProperty());

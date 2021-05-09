@@ -9,11 +9,11 @@
     <children>
       <ImageView fitHeight="303.0" fitWidth="668.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../login.jpg" />
+            <Image url="@../182807144_216231186639582_4749287873501319261_n.png" />
          </image>
       </ImageView>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="53.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quyền sử dụng" wrappingWidth="133.13671875">
+        <Text layoutX="46.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quyền sử dụng" wrappingWidth="133.13671875">
             <font>
                 <Font size="18.0" />
             </font>
@@ -28,7 +28,7 @@
                 <Font size="18.0" />
             </font>
         </Text>
-        <Text layoutX="320.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chức vụ">
+        <Text layoutX="374.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chức vụ">
             <font>
                 <Font size="18.0" />
             </font>
@@ -44,11 +44,11 @@
             </font>
         </Text>
         <TextField fx:id="ten_dang_nhap" layoutX="187.0" layoutY="138.0" prefHeight="25.0" prefWidth="108.0" promptText="user name" />
-        <Button layoutX="155.0" layoutY="220.0" mnemonicParsing="false" onAction="#add_user" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
-        <Button layoutX="290.0" layoutY="220.0" mnemonicParsing="false" onAction="#delete_user" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
-        <Button layoutX="425.0" layoutY="220.0" mnemonicParsing="false" onAction="#update_user" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
+        <Button layoutX="164.0" layoutY="255.0" mnemonicParsing="false" onAction="#add_user" prefHeight="25.0" prefWidth="64.0" text="Thêm " />
+        <Button layoutX="334.0" layoutY="255.0" mnemonicParsing="false" onAction="#delete_user" prefHeight="25.0" prefWidth="64.0" text="Xóa" />
+        <Button layoutX="476.0" layoutY="255.0" mnemonicParsing="false" onAction="#update_user" prefHeight="25.0" prefWidth="64.0" text="Sửa" />
         <Button layoutX="580.0" layoutY="267.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="75.0" text="Xong" fx:id="xong" />
-        <Text layoutX="103.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý hệ thống người dùng" textAlignment="CENTER" wrappingWidth="462.7016296386719">
+        <Text fill="#bf0808" layoutX="-38.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lý hệ thống người dùng" textAlignment="CENTER" wrappingWidth="447.7016296386719">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>

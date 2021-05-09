@@ -9,28 +9,23 @@
     <children>
       <ImageView fitHeight="303.0" fitWidth="668.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../login.jpg" />
+            <Image url="@../79486688_2573998016215833_5707159045505286144_n.png" />
          </image>
       </ImageView>
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text layoutX="95.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên đăng nhập" wrappingWidth="143.6171875">
-            <font>
-                <Font name="Times New Roman" size="20.0" />
-            </font>
-        </Text>
-        <Text layoutX="102.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mật khẩu">
-            <font>
-                <Font name="Times New Roman" size="20.0" />
-            </font>
-        </Text>
-        <TextField fx:id="user_id" layoutX="260.0" layoutY="116.0" prefHeight="35.0" prefWidth="253.0" promptText="User Name" />
-        <Text layoutX="260.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đăng nhập" wrappingWidth="164.70162963867188">
+        <TextField fx:id="user_id" layoutX="208.0" layoutY="103.0" prefHeight="35.0" prefWidth="253.0" promptText="User Name" />
+        <Text layoutX="252.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" wrappingWidth="164.70162963867188">
             <font>
                 <Font name="Times New Roman Bold" size="32.0" />
             </font>
         </Text>
-      <PasswordField fx:id="password_id" layoutX="260.0" layoutY="172.0" prefHeight="35.0" prefWidth="253.0" promptText="Password" />
-      <Button defaultButton="true" layoutX="504.0" layoutY="228.0" mnemonicParsing="false" onAction="#login_action" prefHeight="25.0" prefWidth="105.0" text="Đăng nhập" />
-      <Button defaultButton="true" layoutX="504.0" layoutY="264.0" mnemonicParsing="false" onAction="#forget_action" prefHeight="25.0" prefWidth="134.0" text="Quên mật khẩu ?" />
+      <PasswordField fx:id="password_id" layoutX="208.0" layoutY="152.0" prefHeight="35.0" prefWidth="253.0" promptText="Password" />
+      <Button defaultButton="true" layoutX="504.0" layoutY="228.0" mnemonicParsing="false" onAction="#login_action" prefHeight="25.0" prefWidth="131.0" text="Login" />
+      <Button layoutX="504.0" layoutY="264.0" mnemonicParsing="false" onAction="#forget_action" prefHeight="25.0" prefWidth="131.0" text="Forget password" />
+      <TextArea editable="false" layoutX="279.0" layoutY="-108.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="51.0" prefWidth="151.0" text="User Login">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </TextArea>
     </children>
 </AnchorPane>

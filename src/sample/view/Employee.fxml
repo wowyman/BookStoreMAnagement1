@@ -74,7 +74,7 @@
       <TextField fx:id="luong" layoutX="139.0" layoutY="225.0" prefHeight="25.0" prefWidth="130.0" />
       <CheckBox fx:id="nam" layoutX="139.0" layoutY="275.0" mnemonicParsing="false" text="Nam" textFill="#55ff00" />
       <CheckBox fx:id="nu" layoutX="204.0" layoutY="275.0" mnemonicParsing="false" text="Nữ" textFill="#e1bf00" />
-      <ComboBox fx:id="ma_nv" layoutX="139.0" layoutY="93.0" prefHeight="25.0" prefWidth="130.0" />
+      <ComboBox fx:id="ma_nv" editable="true" layoutX="139.0" layoutY="93.0" prefHeight="25.0" prefWidth="130.0" />
       <TableView fx:id="table" layoutX="1.0" layoutY="349.0" prefHeight="93.0" prefWidth="609.0">
         <columns>
           <TableColumn fx:id="manv" prefWidth="70.0" text="Mã nv" />
